@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  font-family: 'Manrope';
+}
+img {
+  max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Manrope';
+  font-weight: 400;
+  position: relative;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  @include container;
+}

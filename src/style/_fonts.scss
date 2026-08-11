@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Onest';
+  src:
+    local('Onest-Regular'),
+    local('Onest Regular'),
+    url('../../assets/fonts/Onest-Thin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src:
+    local('Onest-Medium'),
+    local('Onest Medium'),
+    url('../../assets/fonts/Onest-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src:
+    local('Onest-Semibold'),
+    local('Onest Semibold'),
+    url('../../assets/fonts/Onest-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src:
+    local('Unbounded-Regular'),
+    local('Unbounded-Regular'),
+    url('../../assets/fonts/Unbounded-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src:
+    local('Unbounded-Medium'),
+    local('Unbounded-Medium'),
+    url('../../assets/fonts/Unbounded-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
