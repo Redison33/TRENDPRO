@@ -37,7 +37,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: "Manrope";
+  font-family: "Onest", sans-serif;
 }
 
 img {
@@ -57,18 +57,88 @@ input[type=number] {
 
 body {
   min-width: 320px;
-  font-family: "Manrope";
+  font-family: "Onest", sans-serif;
   font-weight: 400;
   position: relative;
   margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  max-width: 1920px;
+}
+
+.container {
+  max-width: 1360px;
   margin: 0 auto;
 }
-@media (max-width: 2040px) {
-  body {
-    margin: 0 60px;
+@media (max-width: 1440px) {
+  .container {
+    margin: 0 40px;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #1e2e47;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(19, 50, 122, 0.5019607843);
+  max-width: 620px;
+}
+
+.primary-button {
+  background: #fff;
+  padding: 4px 24px 4px 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Onest", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: #1e2e47;
+  border-radius: 45px;
+}
+.primary-button .icon {
+  background: linear-gradient(180deg, #1560bd 0%, #5ca5ff 100%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary-button {
+  background: linear-gradient(135.95deg, #4c9cff -59.81%, #1560bd 164.51%);
+  color: #ffffff;
+}
+.secondary-button .icon {
+  background: #ffffff;
 }/*# sourceMappingURL=style-general.css.map */

@@ -7,7 +7,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  font-family: 'Manrope';
+  font-family: $font-main;
 }
 img {
   max-width: 100%;
@@ -26,12 +26,55 @@ input[type='number'] {
 
 body {
   min-width: 320px;
-  font-family: 'Manrope';
+  font-family: $font-main;
   font-weight: 400;
   position: relative;
   margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+}
+
+.container {
   @include container;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #1e2e47;
+  font-family: $font-titles;
+  font-weight: $weight-regular;
+}
+
+h1 {
+  font-size: $fz-h1;
+}
+h2 {
+  font-size: $fz-h2;
+  text-align: center;
+}
+h3 {
+  font-size: $fz-h3;
+}
+h4 {
+  font-size: $fz-h4;
+}
+h5 {
+  font-size: $fz-h5;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: $fz-subtitle;
+  line-height: 125%;
+  color: #13327a80;
+  max-width: 620px;
+}
+
+.primary-button {
+  @include primary-button;
+}
+
+.secondary-button {
+  @include secondary-button;
 }

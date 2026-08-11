@@ -1,1 +1,164 @@
-/*# sourceMappingURL=style-index.css.map */
+.plan {
+  padding: 72px 0;
+  margin-bottom: 32px;
+}
+.plan__container .plan__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.plan__container .plan__content ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.plan__container .plan__content ol li .card {
+  background-image: url("../../assets/img/plan_card_bg.png");
+  background-position: top center;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 396px;
+}
+.plan__container .plan__content ol li .card__number {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #488eff;
+}
+.plan__container .plan__content ol li .card__content {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.plan__container .plan__content ol li .card__content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 125%;
+  color: rgba(19, 50, 122, 0.5019607843);
+}
+.plan__container .plan__content .banner {
+  background-image: url("../../assets/img/plan_banner_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  border-radius: 12px;
+  display: flex;
+  gap: 32px;
+}
+.plan__container .plan__content .banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.plan__container .plan__content .banner__content h3 {
+  color: #f5f5f5;
+}
+.plan__container .plan__content .banner__content .banner__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.plan__container .plan__content .banner__content .banner__wrap .banner__plus {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: 16px;
+  line-height: 125%;
+}
+.plan__container .plan__content .banner__content .banner__wrap .banner__plus .banner__icon {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  border-image-source: linear-gradient(169.15deg, rgba(255, 255, 255, 0.4) 0%, rgba(238, 237, 237, 0.2) 96.79%);
+}
+.plan__container .plan__content .banner__actions {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.plan__container .plan__content .banner__actions p {
+  color: rgba(255, 255, 255, 0.7490196078);
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.social {
+  padding: 72px 0;
+  margin-bottom: 32px;
+}
+.social__container .social__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.social__container .banner {
+  background-image: url("../../assets/img/plan_banner_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  gap: 120px;
+  margin-bottom: 16px;
+}
+.social__container .banner__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social__container .banner__wrap h5 {
+  color: #f5f5f5;
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: "Onest", sans-serif;
+  font-weight: 600;
+}
+.social__container .banner__wrap p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7490196078);
+  line-height: 130%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.social__container .banner .divider {
+  width: 1px;
+  min-height: 100%;
+  background-color: rgba(152, 183, 255, 0.6509803922);
+}
+.social__container .social__info {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 500;
+  color: #337de8;
+  font-size: 12px;
+}/*# sourceMappingURL=style-index.css.map */

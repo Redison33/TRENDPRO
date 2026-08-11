@@ -1,11 +1,11 @@
 @mixin container {
   // max-width: 1600px;
   // margin: 0 20px;
-  max-width: 1920px;
+  max-width: 1360px;
   margin: 0 auto;
 
-  @media (max-width: 2040px) {
-    margin: 0 60px;
+  @media (max-width: 1440px) {
+    margin: 0 40px;
   }
 
   // @media (max-width: 1200px) {
@@ -22,288 +22,325 @@
 }
 
 @mixin base-button {
-  font-family: 'Manrope';
+  background: #fff;
+  padding: 4px 24px 4px 4px;
   display: flex;
-  padding: $spacing-ssm $spacing-m;
-  font-size: $fz-buttons;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-main;
   font-weight: $weight-medium;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background-color: transparent;
-  color: $base-text-primary;
-  cursor: pointer;
-  text-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: $spacing-xs;
-  transition:
-    color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  font-size: $fz-subtitle;
+  line-height: 125%;
+  color: #1e2e47;
+  border-radius: 45px;
 
-  @media (max-width: 1600px) {
-    font-size: 14px;
-    padding: $spacing-s $spacing-sm;
+  .icon {
+    background: linear-gradient(180deg, #1560bd 0%, #5ca5ff 100%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-@mixin button-primary {
-  background-color: $controls-primary;
-  color: $controls-text;
-  border: 1px solid $controls-primary;
+@mixin primary-button {
+  @include base-button;
+}
 
-  &:hover {
-    background-color: $controls-hover-focus;
-    border-color: $controls-hover-focus;
-  }
+@mixin secondary-button {
+  background: linear-gradient(135.95deg, #4c9cff -59.81%, #1560bd 164.51%);
+  color: #ffffff;
 
-  &:active {
-    background-color: $controls-active;
-    border-color: $controls-active;
-  }
-
-  &[disabled='disabled'],
-  &:disabled {
-    background-color: $controls-disabled;
-    border-color: $controls-disabled;
+  .icon {
+    background: #ffffff;
   }
 }
 
-@mixin button-secondary {
-  background-color: $base-surface;
-  color: $controls-primary;
-  border: 1px solid $controls-primary;
+// @mixin base-button {
+//   font-family: 'Manrope';
+//   display: flex;
+//   padding: $spacing-ssm $spacing-m;
+//   font-size: $fz-buttons;
+//   font-weight: $weight-medium;
+//   border-radius: 10px;
+//   border: 1px solid transparent;
+//   background-color: transparent;
+//   color: $base-text-primary;
+//   cursor: pointer;
+//   text-wrap: nowrap;
+//   justify-content: center;
+//   align-items: center;
+//   gap: $spacing-xs;
+//   transition:
+//     color 0.3s ease-in-out,
+//     background-color 0.3s ease-in-out,
+//     border-color 0.3s ease-in-out;
 
-  &:hover {
-    border-color: $controls-hover-focus;
-    background-color: $primary-light;
-  }
+//   @media (max-width: 1600px) {
+//     font-size: 14px;
+//     padding: $spacing-s $spacing-sm;
+//   }
+// }
 
-  &:active {
-    color: $controls-active;
-    border-color: #c9dcff;
-    background-color: #c9dcff;
-  }
+// @mixin button-primary {
+//   background-color: $controls-primary;
+//   color: $controls-text;
+//   border: 1px solid $controls-primary;
 
-  &[disabled='disabled'],
-  &:disabled {
-    background-color: $controls-disabled;
-  }
-}
+//   &:hover {
+//     background-color: $controls-hover-focus;
+//     border-color: $controls-hover-focus;
+//   }
 
-@mixin button-destructive {
-  background-color: $status-error-500;
-  color: $controls-text;
-  border: 1px solid $status-error-500;
+//   &:active {
+//     background-color: $controls-active;
+//     border-color: $controls-active;
+//   }
 
-  &:hover {
-    background-color: #d32f2f;
-    border-color: #d32f2f;
-  }
+//   &[disabled='disabled'],
+//   &:disabled {
+//     background-color: $controls-disabled;
+//     border-color: $controls-disabled;
+//   }
+// }
 
-  &:active {
-    background-color: #b71c1c;
-    border-color: #b71c1c;
-  }
+// @mixin button-secondary {
+//   background-color: $base-surface;
+//   color: $controls-primary;
+//   border: 1px solid $controls-primary;
 
-  &[disabled='disabled'],
-  &:disabled {
-    background-color: #fdd8d8;
-    border-color: #fdd8d8;
-  }
-}
+//   &:hover {
+//     border-color: $controls-hover-focus;
+//     background-color: $primary-light;
+//   }
 
-@mixin button-accept {
-  background-color: $status-success-500;
-  color: $base-surface;
-  border: 1px solid $status-success-500;
+//   &:active {
+//     color: $controls-active;
+//     border-color: #c9dcff;
+//     background-color: #c9dcff;
+//   }
 
-  &:hover {
-    border-color: #43b146;
-    background-color: #43b146;
-  }
+//   &[disabled='disabled'],
+//   &:disabled {
+//     background-color: $controls-disabled;
+//   }
+// }
 
-  &:active {
-    color: #37943a;
-    background-color: #37943a;
-  }
+// @mixin button-destructive {
+//   background-color: $status-error-500;
+//   color: $controls-text;
+//   border: 1px solid $status-error-500;
 
-  &[disabled='disabled'],
-  &:disabled {
-    background-color: $controls-disabled;
-    border: $controls-disabled;
-  }
-}
+//   &:hover {
+//     background-color: #d32f2f;
+//     border-color: #d32f2f;
+//   }
 
-@mixin button-white {
-  background-color: $base-surface;
-  color: $controls-primary;
-  border: 1px solid $base-surface;
+//   &:active {
+//     background-color: #b71c1c;
+//     border-color: #b71c1c;
+//   }
 
-  &:hover {
-    border-color: $primary-light;
-    background-color: $primary-light;
-  }
+//   &[disabled='disabled'],
+//   &:disabled {
+//     background-color: #fdd8d8;
+//     border-color: #fdd8d8;
+//   }
+// }
 
-  &:active {
-    color: $controls-active;
-    border-color: #c9dcff;
-    background-color: #c9dcff;
-  }
+// @mixin button-accept {
+//   background-color: $status-success-500;
+//   color: $base-surface;
+//   border: 1px solid $status-success-500;
 
-  &[disabled='disabled'],
-  &:disabled {
-    background-color: $controls-disabled;
-  }
-}
+//   &:hover {
+//     border-color: #43b146;
+//     background-color: #43b146;
+//   }
 
-@mixin button-pagination {
-  background-color: $base-surface;
-  border: 1px solid $base-surface;
-  padding: 0;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
+//   &:active {
+//     color: #37943a;
+//     background-color: #37943a;
+//   }
 
-  &:hover {
-    border-color: $primary-light;
-    background-color: $primary-light;
-  }
+//   &[disabled='disabled'],
+//   &:disabled {
+//     background-color: $controls-disabled;
+//     border: $controls-disabled;
+//   }
+// }
 
-  &:active {
-    color: $controls-active;
-    border-color: #c9dcff;
-    background-color: #c9dcff;
-  }
+// @mixin button-white {
+//   background-color: $base-surface;
+//   color: $controls-primary;
+//   border: 1px solid $base-surface;
 
-  &[disabled='disabled'],
-  &:disabled {
-    background-color: $controls-disabled;
-  }
-}
+//   &:hover {
+//     border-color: $primary-light;
+//     background-color: $primary-light;
+//   }
 
-@mixin input-base {
-  font-family: 'Manrope';
-  padding: $spacing-ssm $spacing-m;
-  border-radius: 10px;
-  background-color: $base-surface;
-  border: 1px solid $base-text-muted;
-  color: #1d1d1d;
-  font-size: $fz-inputs;
-  font-weight: $weight-regular;
-  resize: none;
-  outline: none;
+//   &:active {
+//     color: $controls-active;
+//     border-color: #c9dcff;
+//     background-color: #c9dcff;
+//   }
 
-  &:focus {
-    border-color: $controls-hover-focus;
-  }
+//   &[disabled='disabled'],
+//   &:disabled {
+//     background-color: $controls-disabled;
+//   }
+// }
 
-  @media (max-width: 1600px) {
-    font-size: 14px;
-    padding: $spacing-s $spacing-sm;
-  }
-}
+// @mixin button-pagination {
+//   background-color: $base-surface;
+//   border: 1px solid $base-surface;
+//   padding: 0;
+//   width: 36px;
+//   height: 36px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 4px;
 
-@mixin input-filter {
-  background-color: $base-background;
-  border-color: $base-background;
-}
+//   &:hover {
+//     border-color: $primary-light;
+//     background-color: $primary-light;
+//   }
 
-@mixin base-checkbox {
-  display: block;
-  position: relative;
-  height: 24px;
-  padding-left: 32px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+//   &:active {
+//     color: $controls-active;
+//     border-color: #c9dcff;
+//     background-color: #c9dcff;
+//   }
 
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
+//   &[disabled='disabled'],
+//   &:disabled {
+//     background-color: $controls-disabled;
+//   }
+// }
 
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 24px;
-    width: 24px;
-    border: 1px solid $base-surface;
-    background-color: $base-surface;
-    border-radius: 4px;
+// @mixin input-base {
+//   font-family: 'Manrope';
+//   padding: $spacing-ssm $spacing-m;
+//   border-radius: 10px;
+//   background-color: $base-surface;
+//   border: 1px solid $base-text-muted;
+//   color: #1d1d1d;
+//   font-size: $fz-inputs;
+//   font-weight: $weight-regular;
+//   resize: none;
+//   outline: none;
 
-    &::after {
-      content: '';
-      position: absolute;
-      display: none;
-      left: 6px;
-      top: 2px;
-      width: 10px;
-      height: 15px;
-      border: solid $base-surface;
-      border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  }
+//   &:focus {
+//     border-color: $controls-hover-focus;
+//   }
 
-  & input:checked ~ .checkmark {
-    background-color: $controls-primary;
-  }
+//   @media (max-width: 1600px) {
+//     font-size: 14px;
+//     padding: $spacing-s $spacing-sm;
+//   }
+// }
 
-  & input:checked ~ .checkmark:after {
-    display: block;
-  }
-}
+// @mixin input-filter {
+//   background-color: $base-background;
+//   border-color: $base-background;
+// }
 
-@mixin base-tooltip {
-  position: relative;
-  cursor: pointer;
-  min-width: 20px;
-  height: 20px;
+// @mixin base-checkbox {
+//   display: block;
+//   position: relative;
+//   height: 24px;
+//   padding-left: 32px;
+//   cursor: pointer;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
 
-  img {
-    width: 20px;
-    height: 20px;
-  }
+//   input {
+//     position: absolute;
+//     opacity: 0;
+//     cursor: pointer;
+//     height: 0;
+//     width: 0;
+//   }
 
-  .tooltiptext {
-    visibility: hidden;
-    width: 180px;
-    background-color: $base-surface;
-    border: 1px solid $base-divider;
-    text-align: center;
-    padding: 2px 4px;
-    border-radius: 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    transform: translateX(-50%);
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3019607843));
+//   .checkmark {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 24px;
+//     width: 24px;
+//     border: 1px solid $base-surface;
+//     background-color: $base-surface;
+//     border-radius: 4px;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 20px solid transparent;
-      border-top: 20px solid $base-surface;
-    }
-  }
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       display: none;
+//       left: 6px;
+//       top: 2px;
+//       width: 10px;
+//       height: 15px;
+//       border: solid $base-surface;
+//       border-width: 0 3px 3px 0;
+//       -webkit-transform: rotate(45deg);
+//       -ms-transform: rotate(45deg);
+//       transform: rotate(45deg);
+//     }
+//   }
 
-  &:hover .tooltiptext {
-    visibility: visible;
-  }
-}
+//   & input:checked ~ .checkmark {
+//     background-color: $controls-primary;
+//   }
+
+//   & input:checked ~ .checkmark:after {
+//     display: block;
+//   }
+// }
+
+// @mixin base-tooltip {
+//   position: relative;
+//   cursor: pointer;
+//   min-width: 20px;
+//   height: 20px;
+
+//   img {
+//     width: 20px;
+//     height: 20px;
+//   }
+
+//   .tooltiptext {
+//     visibility: hidden;
+//     width: 180px;
+//     background-color: $base-surface;
+//     border: 1px solid $base-divider;
+//     text-align: center;
+//     padding: 2px 4px;
+//     border-radius: 10px;
+//     position: absolute;
+//     z-index: 1;
+//     bottom: 150%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3019607843));
+
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       bottom: -30px;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       border: 20px solid transparent;
+//       border-top: 20px solid $base-surface;
+//     }
+//   }
+
+//   &:hover .tooltiptext {
+//     visibility: visible;
+//   }
+// }
