@@ -161,4 +161,65 @@
   font-weight: 500;
   color: #337de8;
   font-size: 12px;
+}
+
+.practical {
+  padding: 72px 0;
+  margin-bottom: 32px;
+  background-image: url("../../assets/img/practical_section_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.practical__container .practical__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.practical__container .practical__header h2 {
+  max-width: 560px;
+  text-align: start;
+}
+.practical__container .practical__header p {
+  max-width: 445px;
+  text-align: start;
+}
+.practical__container .practical__cards {
+  margin-bottom: 56px;
+}
+.practical__container .practical__cards ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.practical__container .practical__cards ul li .card {
+  border: 1px solid #e5eefd;
+  background: #fff;
+  border-radius: 12px;
+}
+.practical__container .practical__cards ul li .card__content .company {
+  margin-bottom: 20px;
+}
+.practical__container .practical__cards ul li .card__content .company img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+.practical__container .practical__cards ul li .card__content .company h5 {
+  font-family: "Onest", sans-serif;
+  line-height: 100%;
+  font-weight: 600;
+  color: #1e2e47;
+  margin-bottom: 8px;
+}
+.practical__container .practical__cards ul li .card__content .company p {
+  font-size: 16px;
+  line-height: 125%;
+  color: rgba(19, 50, 122, 0.5019607843);
+}
+.practical__container .practical__cards ul li .card__content .worker {
+  padding: 24px 0;
+  border-top: 1px solid #e5eefd;
+  border-bottom: 1px solid #e5eefd;
 }/*# sourceMappingURL=style-index.css.map */

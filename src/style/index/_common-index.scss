@@ -206,3 +206,80 @@
     }
   }
 }
+
+.practical {
+  padding: 72px 0;
+  margin-bottom: 32px;
+  background-image: url('../../assets/img/practical_section_bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &__container {
+    .practical__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 48px;
+
+      h2 {
+        max-width: 560px;
+        text-align: start;
+      }
+
+      p {
+        max-width: 445px;
+        text-align: start;
+      }
+    }
+
+    .practical__cards {
+      margin-bottom: 56px;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+          .card {
+            border: 1px solid #e5eefd;
+            background: #fff;
+            border-radius: 12px;
+
+            &__content {
+              .company {
+                margin-bottom: 20px;
+
+                img {
+                  width: 40px;
+                  height: 40px;
+                  margin-bottom: 16px;
+                }
+
+                h5 {
+                  font-family: $font-main;
+                  line-height: 100%;
+                  font-weight: $weight-semibold;
+                  color: #1e2e47;
+                  margin-bottom: 8px;
+                }
+
+                p {
+                  font-size: $fz-body;
+                  line-height: 125%;
+                  color: #13327a80;
+                }
+              }
+
+              .worker {
+                padding: 24px 0;
+                border-top: 1px solid #e5eefd;
+                border-bottom: 1px solid #e5eefd;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
