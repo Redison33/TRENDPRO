@@ -752,9 +752,90 @@
   margin-bottom: 48px;
 }
 .FAQ__container .FAQ__tabs {
+  position: relative;
+  z-index: 1;
   display: flex;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: -50px;
+}
+.FAQ__container .FAQ__content {
+  position: relative;
+  transition: height 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .tab-block {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 16px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-left {
+  margin-top: 82px;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-left h3 {
+  color: #1e2e47;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 24px;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-left p {
+  max-width: 325px;
+  color: rgba(19, 50, 122, 0.5019607843);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion {
+  border: 1px solid #e5eefd;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 26px 24px;
+  transition: background-color 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion__button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1e2e47;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion__button svg {
+  transition: transform 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion__button--active svg {
+  transform: rotate(180deg);
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion__content {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion--active {
+  background-color: #f4f6ff;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li:nth-child(n+7) {
+  display: none;
+}
+.FAQ__container .FAQ__content .tab-block--active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .video {

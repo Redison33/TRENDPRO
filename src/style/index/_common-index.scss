@@ -910,9 +910,118 @@
     }
 
     .FAQ__tabs {
+      position: relative;
+      z-index: 1;
       display: flex;
       gap: 8px;
-      margin-bottom: 16px;
+      margin-bottom: -50px;
+    }
+
+    .FAQ__content {
+      // height: 665px;
+      position: relative;
+      transition: height 0.3s ease-in-out;
+
+      .tab-block {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        grid-template-columns: 440px 1fr;
+        gap: 16px;
+        opacity: 0;
+        transform: scale(0);
+        // transform: translateX(-100%);
+        transition:
+          opacity 0.3s ease-in-out,
+          transform 0.3s ease-in-out;
+
+        &__wrap {
+          &-left {
+            margin-top: 82px;
+
+            h3 {
+              color: #1e2e47;
+              line-height: 100%;
+              letter-spacing: 0%;
+              margin-bottom: 24px;
+            }
+
+            p {
+              max-width: 325px;
+              color: #13327a80;
+              font-weight: $weight-medium;
+              font-size: $fz-body-sm;
+              line-height: 120%;
+              letter-spacing: 0%;
+            }
+          }
+
+          &-right {
+            ol {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              list-style: none;
+
+              li {
+                .accordion {
+                  border: 1px solid #e5eefd;
+                  border-radius: 12px;
+                  background-color: #fff;
+                  padding: 26px 24px;
+                  transition: background-color 0.3s ease-in-out;
+
+                  &__button {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #1e2e47;
+                    font-weight: $weight-semibold;
+                    font-size: $fz-body;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+
+                    svg {
+                      transition: transform 0.3s ease-in-out;
+                    }
+
+                    &--active {
+                      svg {
+                        transform: rotate(180deg);
+                      }
+                    }
+                  }
+
+                  &__content {
+                    height: 0px;
+                    overflow: hidden;
+                    transition:
+                      height 0.3s ease-in-out,
+                      padding-top 0.3s ease-in-out;
+                  }
+
+                  &--active {
+                    background-color: #f4f6ff;
+                  }
+                }
+
+                &:nth-child(n + 7) {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        &--active {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
     }
   }
 }
