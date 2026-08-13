@@ -50,11 +50,33 @@
 }
 
 @mixin secondary-button {
+  @include base-button;
+
   background: linear-gradient(135.95deg, #4c9cff -59.81%, #1560bd 164.51%);
   color: #ffffff;
 
   .icon {
     background: #ffffff;
+  }
+}
+
+@mixin tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e2e47;
+  font-weight: $weight-medium;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: 1px solid #e5eefd;
+  padding: 14px 20px;
+  border-radius: 12px;
+
+  svg {
+    linearGradient {
+      display: none;
+    }
   }
 }
 

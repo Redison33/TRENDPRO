@@ -10,12 +10,1118 @@
     <link rel="stylesheet" href="./src/style/index/style-index.css" />
     <script defer src="./src/libs/swiper-bundle.min.js"></script>
     <script defer src="./src/script/main.js"></script>
-    <script defer src="./src/script/index.js"></script>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div class="header__container container">
+        <img class="header__logo" src="./src/assets/img/header_logo.png" alt="" />
+
+        <nav class="header__nav nav">
+          <ul class="nav__list list">
+            <li class="list__item">
+              <a href="">Решения</a>
+            </li>
+
+            <li class="list__item">
+              <a href="">Кейсы</a>
+            </li>
+
+            <li class="list__item">
+              <a href="">Сообщество</a>
+            </li>
+
+            <li class="list__item">
+              <a href="">О компании</a>
+            </li>
+
+            <li class="list__item">
+              <a href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="secondary-button">
+            <div class="icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.7344 3.14238C17.7556 3.1337 19.4154 2.46001 19.2764 4.13164C19.2296 4.82448 18.8564 7.24985 18.4824 9.87285L17.3135 17.6443C17.0178 19.8949 15.0754 18.8298 14.0879 18.0896C13.9008 17.9411 10.5817 15.7137 9.3662 14.6248C9.03903 14.3279 8.6653 13.7336 9.41307 13.0408C11.0958 11.4075 13.1058 9.37855 14.3213 8.0916C14.8821 7.49776 15.4435 6.11218 13.1064 7.79472L6.51463 12.4969C6.49465 12.5098 5.74759 12.9851 4.36424 12.5457C2.962 12.1002 1.32616 11.5066 1.32616 11.5066C1.31194 11.4971 0.216812 10.7593 2.12108 9.97246C4.97891 8.73606 15.3221 4.20005 17.7344 3.14238Z"
+                  fill="url(#paint0_linear_576_1467)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_576_1467"
+                    x1="10.1423"
+                    y1="3.00098"
+                    x2="10.1423"
+                    y2="19.0001"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#1560BD" />
+                    <stop offset="1" stop-color="#5CA5FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            Написать в TG
+          </button>
+
+          <button class="header__burger">
+            <svg
+              width="15"
+              height="14"
+              viewBox="0 0 15 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5 11.6667V13.3333H2.5V11.6667H12.5ZM15 5.83333V7.5H0V5.83333H15ZM12.5 0V1.66667H2.5V0H12.5Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
 
     <main>
+      <section class="hero">
+        <div class="hero__container container">
+          <span class="tag">Сообщество развития</span>
+
+          <h1>Помогаем предпринимателям выстраивать бизнес как систему</h1>
+
+          <p class="subtitle">
+            Находим точки роста, организуем процессы, объединяем сильных специалистов и внедряем
+            решения, которые дают измеримый результат
+          </p>
+
+          <button class="primary-button">
+            <div class="icon">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.7344 0.141402C16.7556 0.132721 18.4154 -0.540968 18.2764 1.13066C18.2296 1.8235 17.8564 4.24887 17.4824 6.87187L16.3135 14.6434C16.0178 16.8939 14.0754 15.8288 13.0879 15.0887C12.9008 14.9401 9.58166 12.7127 8.3662 11.6238C8.03903 11.3269 7.6653 10.7326 8.41307 10.0398C10.0958 8.40655 12.1058 6.37757 13.3213 5.09062C13.8821 4.49679 14.4435 3.11121 12.1064 4.79375L5.51463 9.49589C5.49465 9.50887 4.74759 9.98417 3.36424 9.54472C1.962 9.09925 0.326157 8.50566 0.326157 8.50566C0.311939 8.49617 -0.783188 7.7583 1.12108 6.97148C3.97891 5.73508 14.3221 1.19908 16.7344 0.141402Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            Начать с консультации
+          </button>
+
+          <div class="hero__info hero__info-1">
+            <p class="text">Проверенных решений</p>
+
+            <p class="number">
+              115
+              <span>+</span>
+            </p>
+          </div>
+          <div class="hero__info hero__info-2">
+            <p class="text">Предпринимателей</p>
+
+            <p class="number">
+              500
+              <span>+</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools">
+        <div class="tools__container container">
+          <div class="tools__header">
+            <h2>Используем ключевые инструменты развития компании</h2>
+            <p class="subtitle">
+              Выберите направления, которые усилят ваш бизнес с помощью современных технологий и
+              экспертной поддержки
+            </p>
+          </div>
+
+          <div class="tools__content">
+            <article class="tools__card card">
+              <div class="card__header">
+                <img src="./src/assets/img/tools_card_1.png" alt="" />
+
+                <h5>Упаковка</h5>
+
+                <a href="">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="#F4F6FF" />
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#E5EEFD" />
+                    <path
+                      d="M16.7842 16.0005L13.4844 12.7006L14.4272 11.7578L18.6698 16.0005L14.4272 20.2431L13.4844 19.3003L16.7842 16.0005Z"
+                      fill="#1E2E47"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <p>
+                Формируем сильное позиционирование и образ компании, повышающие её ценность и
+                доверие клиентов.
+              </p>
+
+              <ul>
+                <li>
+                  <a class="active" href="">
+                    <img src="./src/assets/img/tools_card_1_list_1.png" alt="" />
+                    Позиционирование
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_1_list_2.png" alt="" />
+
+                    Сайты
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_1_list_3.png" alt="" />
+
+                    Креативы
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_1_list_4.png" alt="" />
+
+                    Айдентика
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_1_list_5.png" alt="" />
+
+                    Презентации
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="tools__card card">
+              <div class="card__header">
+                <img src="./src/assets/img/tools_card_2.png" alt="" />
+
+                <h5>Маркетинг</h5>
+
+                <a href="">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="#F4F6FF" />
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#E5EEFD" />
+                    <path
+                      d="M16.7842 16.0005L13.4844 12.7006L14.4272 11.7578L18.6698 16.0005L14.4272 20.2431L13.4844 19.3003L16.7842 16.0005Z"
+                      fill="#1E2E47"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <p>
+                Строим прогнозируемую систему привлечения клиентов через эффективные каналы
+                продвижения.
+              </p>
+
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_2_list_1.png" alt="" />
+                    Лидогенерация
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_2_list_2.png" alt="" />
+
+                    Реклама
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_2_list_3.png" alt="" />
+
+                    Аналитика
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="active" href="">
+                    <img src="./src/assets/img/tools_card_2_list_4.png" alt="" />
+
+                    SEO
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_2_list_5.png" alt="" />
+
+                    SMM
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="tools__card card">
+              <div class="card__header">
+                <img src="./src/assets/img/tools_card_3.png" alt="" />
+
+                <h5>Продажи</h5>
+
+                <a href="">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="#F4F6FF" />
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#E5EEFD" />
+                    <path
+                      d="M16.7842 16.0005L13.4844 12.7006L14.4272 11.7578L18.6698 16.0005L14.4272 20.2431L13.4844 19.3003L16.7842 16.0005Z"
+                      fill="#1E2E47"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <p>
+                Настраиваем процессы продаж так, чтобы новые лиды стабильно превращались в клиентов.
+              </p>
+
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_3_list_1.png" alt="" />
+                    Скрипты продаж
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="active" href="">
+                    <img src="./src/assets/img/tools_card_3_list_2.png" alt="" />
+
+                    Call-центр
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_3_list_3.png" alt="" />
+
+                    Клиентский сервис
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_3_list_4.png" alt="" />
+
+                    Мотивация и KPI
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_3_list_5.png" alt="" />
+
+                    Конверсия
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="tools__card card">
+              <div class="card__header">
+                <img src="./src/assets/img/tools_card_4.png" alt="" />
+
+                <h5>Автоматизация + AI</h5>
+
+                <a href="">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="#F4F6FF" />
+                    <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#E5EEFD" />
+                    <path
+                      d="M16.7842 16.0005L13.4844 12.7006L14.4272 11.7578L18.6698 16.0005L14.4272 20.2431L13.4844 19.3003L16.7842 16.0005Z"
+                      fill="#1E2E47"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <p>
+                Автоматизируем процессы и внедряем AI, снижая зависимость бизнеса от вашего личного
+                участия.
+              </p>
+
+              <ul>
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_4_list_1.png" alt="" />
+
+                    Создание чат-бота
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_4_list_2.png" alt="" />
+
+                    Аналитика
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_4_list_3.png" alt="" />
+
+                    Интеграции
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a class="active" href="">
+                    <img src="./src/assets/img/tools_card_4_list_4.png" alt="" />
+
+                    Внедрение AI
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="">
+                    <img src="./src/assets/img/tools_card_4_list_5.png" alt="" />
+
+                    CRM
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                        fill-opacity="0.2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions">
+        <div class="questions__container container">
+          <div class="questions__header">
+            <h2>Кто нужен именно вам?</h2>
+            <p class="subtitle">
+              Подберём сотрудников, экспертов или подрядчиков, которые соответствуют вашим целям и
+              этапу развития
+            </p>
+          </div>
+
+          <div class="questions__tabs">
+            <button class="tab tab--active">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.9974 8.33366C11.8383 8.33366 13.3307 6.84128 13.3307 5.00033C13.3307 3.15938 11.8383 1.66699 9.9974 1.66699C8.15645 1.66699 6.66406 3.15938 6.66406 5.00033C6.66406 6.84128 8.15645 8.33366 9.9974 8.33366ZM4.58073 10.8337C5.73132 10.8337 6.66406 9.90091 6.66406 8.75033C6.66406 7.59973 5.73132 6.66699 4.58073 6.66699C3.43014 6.66699 2.4974 7.59973 2.4974 8.75033C2.4974 9.90091 3.43014 10.8337 4.58073 10.8337ZM17.4974 8.75033C17.4974 9.90091 16.5646 10.8337 15.4141 10.8337C14.2635 10.8337 13.3307 9.90091 13.3307 8.75033C13.3307 7.59973 14.2635 6.66699 15.4141 6.66699C16.5646 6.66699 17.4974 7.59973 17.4974 8.75033ZM9.9974 9.16699C12.2986 9.16699 14.1641 11.0325 14.1641 13.3337V18.3337H5.83073V13.3337C5.83073 11.0325 7.69621 9.16699 9.9974 9.16699ZM4.16406 13.3336C4.16406 12.7562 4.24795 12.1983 4.40421 11.6717L4.26293 11.684C2.80159 11.8423 1.66406 13.0802 1.66406 14.5836V18.3336H4.16406V13.3336ZM18.3307 18.3336V14.5836C18.3307 13.0318 17.119 11.7631 15.5906 11.6717C15.7468 12.1983 15.8307 12.7562 15.8307 13.3336V18.3336H18.3307Z"
+                  fill="black"
+                />
+                <path
+                  d="M9.9974 8.33366C11.8383 8.33366 13.3307 6.84128 13.3307 5.00033C13.3307 3.15938 11.8383 1.66699 9.9974 1.66699C8.15645 1.66699 6.66406 3.15938 6.66406 5.00033C6.66406 6.84128 8.15645 8.33366 9.9974 8.33366ZM4.58073 10.8337C5.73132 10.8337 6.66406 9.90091 6.66406 8.75033C6.66406 7.59973 5.73132 6.66699 4.58073 6.66699C3.43014 6.66699 2.4974 7.59973 2.4974 8.75033C2.4974 9.90091 3.43014 10.8337 4.58073 10.8337ZM17.4974 8.75033C17.4974 9.90091 16.5646 10.8337 15.4141 10.8337C14.2635 10.8337 13.3307 9.90091 13.3307 8.75033C13.3307 7.59973 14.2635 6.66699 15.4141 6.66699C16.5646 6.66699 17.4974 7.59973 17.4974 8.75033ZM9.9974 9.16699C12.2986 9.16699 14.1641 11.0325 14.1641 13.3337V18.3337H5.83073V13.3337C5.83073 11.0325 7.69621 9.16699 9.9974 9.16699ZM4.16406 13.3336C4.16406 12.7562 4.24795 12.1983 4.40421 11.6717L4.26293 11.684C2.80159 11.8423 1.66406 13.0802 1.66406 14.5836V18.3336H4.16406V13.3336ZM18.3307 18.3336V14.5836C18.3307 13.0318 17.119 11.7631 15.5906 11.6717C15.7468 12.1983 15.8307 12.7562 15.8307 13.3336V18.3336H18.3307Z"
+                  fill="url(#paint0_linear_576_440)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_576_440"
+                    x1="5.3099"
+                    y1="5.31283"
+                    x2="17.0286"
+                    y2="19.6357"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#488EFF" />
+                    <stop offset="1" stop-color="#0F3D85" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              Подбор персонала
+            </button>
+
+            <button class="tab">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.15256 2.35466L10 0.833008L16.8474 2.35466C17.2287 2.43939 17.5 2.77757 17.5 3.16815V11.4904C17.5 13.1622 16.6645 14.7233 15.2735 15.6507L10 19.1663L4.7265 15.6507C3.33551 14.7233 2.5 13.1622 2.5 11.4904V3.16815C2.5 2.77757 2.77128 2.43939 3.15256 2.35466ZM4.16667 3.83662V11.4904C4.16667 12.6049 4.72367 13.6457 5.651 14.2639L10 17.1633L14.349 14.2639C15.2763 13.6457 15.8333 12.6049 15.8333 11.4904V3.83662L10 2.54033L4.16667 3.83662ZM10 9.16634C8.84942 9.16634 7.91667 8.2336 7.91667 7.08301C7.91667 5.93242 8.84942 4.99967 10 4.99967C11.1506 4.99967 12.0833 5.93242 12.0833 7.08301C12.0833 8.2336 11.1506 9.16634 10 9.16634ZM6.27288 13.333C6.48016 11.458 8.06977 9.99967 10 9.99967C11.9303 9.99967 13.5198 11.458 13.7271 13.333H6.27288Z"
+                  fill="#1E2E47"
+                />
+
+                <path
+                  d="M3.15256 2.35466L10 0.833008L16.8474 2.35466C17.2287 2.43939 17.5 2.77757 17.5 3.16815V11.4904C17.5 13.1622 16.6645 14.7233 15.2735 15.6507L10 19.1663L4.7265 15.6507C3.33551 14.7233 2.5 13.1622 2.5 11.4904V3.16815C2.5 2.77757 2.77128 2.43939 3.15256 2.35466ZM4.16667 3.83662V11.4904C4.16667 12.6049 4.72367 13.6457 5.651 14.2639L10 17.1633L14.349 14.2639C15.2763 13.6457 15.8333 12.6049 15.8333 11.4904V3.83662L10 2.54033L4.16667 3.83662ZM10 9.16634C8.84942 9.16634 7.91667 8.2336 7.91667 7.08301C7.91667 5.93242 8.84942 4.99967 10 4.99967C11.1506 4.99967 12.0833 5.93242 12.0833 7.08301C12.0833 8.2336 11.1506 9.16634 10 9.16634ZM6.27288 13.333C6.48016 11.458 8.06977 9.99967 10 9.99967C11.9303 9.99967 13.5198 11.458 13.7271 13.333H6.27288Z"
+                  fill="url(#paint0_linear_576_441)"
+                />
+
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_576_441"
+                    x1="5.3099"
+                    y1="5.31283"
+                    x2="17.0286"
+                    y2="19.6357"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#488EFF" />
+                    <stop offset="1" stop-color="#0F3D85" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              Эксперты и подрядчики
+            </button>
+          </div>
+
+          <div class="questions__content">
+            <div class="questions__block tab-block tab-block--active">
+              <div class="tab-block__wrap tab-block__wrap-left">
+                <div class="tab-block__content">
+                  <h5>Собираем сильную команду</h5>
+
+                  <p>
+                    HR-аудит, оценка кандидатов, система мотивации, адаптация, обучение,
+                    автоматизация и другие решения для развития.
+                  </p>
+
+                  <button class="secondary-button">
+                    <div class="icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7344 3.14238C17.7556 3.1337 19.4154 2.46001 19.2764 4.13164C19.2296 4.82448 18.8564 7.24985 18.4824 9.87285L17.3135 17.6443C17.0178 19.8949 15.0754 18.8298 14.0879 18.0896C13.9008 17.9411 10.5817 15.7137 9.3662 14.6248C9.03903 14.3279 8.6653 13.7336 9.41307 13.0408C11.0958 11.4075 13.1058 9.37855 14.3213 8.0916C14.8821 7.49776 15.4435 6.11218 13.1064 7.79472L6.51463 12.4969C6.49465 12.5098 5.74759 12.9851 4.36424 12.5457C2.962 12.1002 1.32616 11.5066 1.32616 11.5066C1.31194 11.4971 0.216812 10.7593 2.12108 9.97246C4.97891 8.73606 15.3221 4.20005 17.7344 3.14238Z"
+                          fill="url(#paint0_linear_576_1467)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_576_1467"
+                            x1="10.1423"
+                            y1="3.00098"
+                            x2="10.1423"
+                            y2="19.0001"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#1560BD" />
+                            <stop offset="1" stop-color="#5CA5FF" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    Обсудить подбор в TG
+                  </button>
+                </div>
+
+                <ul>
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Руководители
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Менеджеры
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Бизнес-ассистенты
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Маркетинг и продажи
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    IT и Digital
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Производство
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Финансы
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Другие специалисты
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-block__wrap tab-block__wrap-right">
+                <img src="./src/assets/img/questions_1.png" alt="" />
+              </div>
+
+              <div class="tab-block__wrap tab-block__wrap-bottom">
+                <article class="tab-block__card card">
+                  <div class="card__header">
+                    <span>1</span>
+
+                    <h5>Системный отбор кандидатов</h5>
+                  </div>
+
+                  <p class="subtitle">
+                    Используем собственную HR-методологию, многоуровневую оценку и AI-инструменты,
+                    чтобы снизить риск неудачного найма.
+                  </p>
+                </article>
+
+                <article class="block__card card">
+                  <div class="card__header">
+                    <span>2</span>
+
+                    <h5>Проверка компетенций и мотивации</h5>
+                  </div>
+
+                  <p class="subtitle">
+                    Оцениваем опыт, компетенции, мотивацию и личные качества, чтобы определить
+                    соответствие кандидата требованиям должности.
+                  </p>
+                </article>
+
+                <article class="block__card card">
+                  <div class="card__header">
+                    <span>3</span>
+
+                    <h5>Адаптация и эффективная работа</h5>
+                  </div>
+
+                  <p class="subtitle">
+                    Настраиваем адаптацию, отчётность и взаимодействие, чтобы сотрудник быстрее
+                    выходил на плановые показатели.
+                  </p>
+                </article>
+              </div>
+            </div>
+
+            <div class="questions__block tab-block">
+              <div class="tab-block__wrap tab-block__wrap-left">
+                <div class="tab-block__content">
+                  <h5>Подключаем нужных специалистов</h5>
+
+                  <p>
+                    Подключаем проверенных специалистов и команды под задачи бизнеса - от разовых
+                    проектов до долгосрочного сопровождения.
+                  </p>
+
+                  <button class="secondary-button">
+                    <div class="icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M17.7344 3.14238C17.7556 3.1337 19.4154 2.46001 19.2764 4.13164C19.2296 4.82448 18.8564 7.24985 18.4824 9.87285L17.3135 17.6443C17.0178 19.8949 15.0754 18.8298 14.0879 18.0896C13.9008 17.9411 10.5817 15.7137 9.3662 14.6248C9.03903 14.3279 8.6653 13.7336 9.41307 13.0408C11.0958 11.4075 13.1058 9.37855 14.3213 8.0916C14.8821 7.49776 15.4435 6.11218 13.1064 7.79472L6.51463 12.4969C6.49465 12.5098 5.74759 12.9851 4.36424 12.5457C2.962 12.1002 1.32616 11.5066 1.32616 11.5066C1.31194 11.4971 0.216812 10.7593 2.12108 9.97246C4.97891 8.73606 15.3221 4.20005 17.7344 3.14238Z"
+                          fill="url(#paint0_linear_576_1467)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_576_1467"
+                            x1="10.1423"
+                            y1="3.00098"
+                            x2="10.1423"
+                            y2="19.0001"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stop-color="#1560BD" />
+                            <stop offset="1" stop-color="#5CA5FF" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    Обсудить подбор в TG
+                  </button>
+                </div>
+
+                <ul>
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Дизайн и брендинг
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Разработка и IT
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Бизнес-ассистенты
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Маркетинг и реклама
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Юристы и консультанты
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Контент, фото и видео
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Финансы и аналитика
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Производственные подрядчики
+                  </li>
+
+                  <li>
+                    <img src="./src/assets/img/questions_list.png" alt="" />
+
+                    Другие специалисты
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-block__wrap tab-block__wrap-right">
+                <img src="./src/assets/img/questions_1.png" alt="" />
+              </div>
+
+              <div class="tab-block__wrap tab-block__wrap-bottom">
+                <article class="tab-block__card card">
+                  <div class="card__header">
+                    <span>1</span>
+
+                    <h5>Системный отбор кандидатов</h5>
+                  </div>
+
+                  <p class="subtitle">
+                    Используем собственную HR-методологию, многоуровневую оценку и AI-инструменты,
+                    чтобы снизить риск неудачного найма.
+                  </p>
+                </article>
+
+                <article class="block__card card">
+                  <div class="card__header">
+                    <span>2</span>
+
+                    <h5>Проверка компетенций и мотивации</h5>
+                  </div>
+
+                  <p class="subtitle">
+                    Оцениваем опыт, компетенции, мотивацию и личные качества, чтобы определить
+                    соответствие кандидата требованиям должности.
+                  </p>
+                </article>
+
+                <article class="block__card card">
+                  <div class="card__header">
+                    <span>3</span>
+
+                    <h5>Адаптация и эффективная работа</h5>
+                  </div>
+
+                  <p class="subtitle">
+                    Настраиваем адаптацию, отчётность и взаимодействие, чтобы сотрудник быстрее
+                    выходил на плановые показатели.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team">
+        <div class="team__container container">
+          <div class="team__header">
+            <h2>TREND PRO создан предпринимателями для предпринимателей</h2>
+            <p class="subtitle">
+              Мы не делимся теориями. Мы делимся тем, что ежедневно проверяем в собственном бизнесе
+              и готовы рекомендовать другим
+            </p>
+          </div>
+
+          <div class="team__content">
+            <div class="team__card team__card-left card"></div>
+
+            <div class="team__card team__card-right card">
+              <h4>Команда TREND PRO</h4>
+
+              <div class="card__wrap">
+                <p>Выберите эксперта, чтобы узнать его опыт:</p>
+
+                <div class="swiper-buttons">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="plan">
         <div class="plan__container container">
           <div class="plan__header">
@@ -31,6 +1137,8 @@
               <li>
                 <article class="plan__card card">
                   <span class="card__number">01</span>
+
+                  <img src="./src/assets/img/plan_card_1.svg" alt="" />
 
                   <div class="card__content">
                     <h5>Первый контакт</h5>
@@ -48,6 +1156,8 @@
                 <article class="plan__card card">
                   <span class="card__number">02</span>
 
+                  <img src="./src/assets/img/plan_card_2.svg" alt="" />
+
                   <div class="card__content">
                     <h5>Онлайн-встреча</h5>
 
@@ -62,6 +1172,8 @@
               <li>
                 <article class="plan__card card">
                   <span class="card__number">03</span>
+
+                  <img src="./src/assets/img/plan_card_3.svg" alt="" />
 
                   <div class="card__content">
                     <h5>Начало работы</h5>
@@ -265,7 +1377,7 @@
                     </div>
                   </div>
 
-                  <button>
+                  <a href="">
                     Открыть кейс
                     <svg
                       width="24"
@@ -279,7 +1391,121 @@
                         fill="#1560BD"
                       />
                     </svg>
-                  </button>
+                  </a>
+                </article>
+              </li>
+
+              <li>
+                <article class="practical__card card">
+                  <div class="card__content">
+                    <div class="card__company company">
+                      <img
+                        class="company__logo"
+                        src="./src/assets/img/practical_card_logo_2.png"
+                        alt=""
+                      />
+
+                      <h5>«GOOD JOB»</h5>
+
+                      <p>Кадровое агентство, поиск и подбор специалистов по всей России.</p>
+                    </div>
+
+                    <div class="card__worker worker">
+                      <div class="worker__profile">
+                        <img src="./src/assets/img/practical_card_1.png" alt="" />
+
+                        <div class="worker__info">
+                          <h6>Александр Репин</h6>
+                          <p>Основатель и генеральный директор компании</p>
+                        </div>
+                      </div>
+
+                      <div class="worker__stack">
+                        <span>HR</span>
+                        <span>AI</span>
+                        <span>Подбор</span>
+                        <span>Автоматизация</span>
+                      </div>
+                    </div>
+
+                    <div class="card__result">
+                      <p>Опубликовано практик</p>
+                      <h3>18</h3>
+                    </div>
+                  </div>
+
+                  <a href="">
+                    Открыть кейс
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                      />
+                    </svg>
+                  </a>
+                </article>
+              </li>
+
+              <li>
+                <article class="practical__card card">
+                  <div class="card__content">
+                    <div class="card__company company">
+                      <img
+                        class="company__logo"
+                        src="./src/assets/img/practical_card_logo_3.png"
+                        alt=""
+                      />
+
+                      <h5>«TREND PRO»</h5>
+
+                      <p>Системное развитие бизнеса через сильное сообщество.</p>
+                    </div>
+
+                    <div class="card__worker worker">
+                      <div class="worker__profile">
+                        <img src="./src/assets/img/practical_card_1.png" alt="" />
+
+                        <div class="worker__info">
+                          <h6>Александр Репин</h6>
+                          <p>Основатель и генеральный директор компании</p>
+                        </div>
+                      </div>
+
+                      <div class="worker__stack">
+                        <span>AI</span>
+                        <span>Автоматизация</span>
+                        <span>CRM</span>
+                        <span>Маркетинг</span>
+                      </div>
+                    </div>
+
+                    <div class="card__result">
+                      <p>Опубликовано практик</p>
+                      <h3>55</h3>
+                    </div>
+                  </div>
+
+                  <a href="">
+                    Открыть кейс
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.1724 12.0007L8.22266 7.05093L9.63688 5.63672L16.0008 12.0007L9.63688 18.3646L8.22266 16.9504L13.1724 12.0007Z"
+                        fill="#1560BD"
+                      />
+                    </svg>
+                  </a>
                 </article>
               </li>
             </ul>
@@ -346,8 +1572,599 @@
           </div>
         </div>
       </section>
+
+      <section class="FAQ">
+        <div class="FAQ__container container">
+          <div class="FAQ__header">
+            <h2>Частые вопросы</h2>
+            <p class="subtitle">
+              Ответы на вопросы предпринимателей, руководителей, экспертов и партнёров TREND PRO
+            </p>
+          </div>
+
+          <div class="FAQ__tabs">
+            <button class="tab tab--active">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.9974 8.33366C11.8383 8.33366 13.3307 6.84128 13.3307 5.00033C13.3307 3.15938 11.8383 1.66699 9.9974 1.66699C8.15645 1.66699 6.66406 3.15938 6.66406 5.00033C6.66406 6.84128 8.15645 8.33366 9.9974 8.33366ZM4.58073 10.8337C5.73132 10.8337 6.66406 9.90091 6.66406 8.75033C6.66406 7.59973 5.73132 6.66699 4.58073 6.66699C3.43014 6.66699 2.4974 7.59973 2.4974 8.75033C2.4974 9.90091 3.43014 10.8337 4.58073 10.8337ZM17.4974 8.75033C17.4974 9.90091 16.5646 10.8337 15.4141 10.8337C14.2635 10.8337 13.3307 9.90091 13.3307 8.75033C13.3307 7.59973 14.2635 6.66699 15.4141 6.66699C16.5646 6.66699 17.4974 7.59973 17.4974 8.75033ZM9.9974 9.16699C12.2986 9.16699 14.1641 11.0325 14.1641 13.3337V18.3337H5.83073V13.3337C5.83073 11.0325 7.69621 9.16699 9.9974 9.16699ZM4.16406 13.3336C4.16406 12.7562 4.24795 12.1983 4.40421 11.6717L4.26293 11.684C2.80159 11.8423 1.66406 13.0802 1.66406 14.5836V18.3336H4.16406V13.3336ZM18.3307 18.3336V14.5836C18.3307 13.0318 17.119 11.7631 15.5906 11.6717C15.7468 12.1983 15.8307 12.7562 15.8307 13.3336V18.3336H18.3307Z"
+                  fill="black"
+                />
+                <path
+                  d="M9.9974 8.33366C11.8383 8.33366 13.3307 6.84128 13.3307 5.00033C13.3307 3.15938 11.8383 1.66699 9.9974 1.66699C8.15645 1.66699 6.66406 3.15938 6.66406 5.00033C6.66406 6.84128 8.15645 8.33366 9.9974 8.33366ZM4.58073 10.8337C5.73132 10.8337 6.66406 9.90091 6.66406 8.75033C6.66406 7.59973 5.73132 6.66699 4.58073 6.66699C3.43014 6.66699 2.4974 7.59973 2.4974 8.75033C2.4974 9.90091 3.43014 10.8337 4.58073 10.8337ZM17.4974 8.75033C17.4974 9.90091 16.5646 10.8337 15.4141 10.8337C14.2635 10.8337 13.3307 9.90091 13.3307 8.75033C13.3307 7.59973 14.2635 6.66699 15.4141 6.66699C16.5646 6.66699 17.4974 7.59973 17.4974 8.75033ZM9.9974 9.16699C12.2986 9.16699 14.1641 11.0325 14.1641 13.3337V18.3337H5.83073V13.3337C5.83073 11.0325 7.69621 9.16699 9.9974 9.16699ZM4.16406 13.3336C4.16406 12.7562 4.24795 12.1983 4.40421 11.6717L4.26293 11.684C2.80159 11.8423 1.66406 13.0802 1.66406 14.5836V18.3336H4.16406V13.3336ZM18.3307 18.3336V14.5836C18.3307 13.0318 17.119 11.7631 15.5906 11.6717C15.7468 12.1983 15.8307 12.7562 15.8307 13.3336V18.3336H18.3307Z"
+                  fill="url(#paint0_linear_576_440)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_576_440"
+                    x1="5.3099"
+                    y1="5.31283"
+                    x2="17.0286"
+                    y2="19.6357"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#488EFF" />
+                    <stop offset="1" stop-color="#0F3D85" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              Предпринимателям
+            </button>
+
+            <button class="tab">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.15256 2.35466L10 0.833008L16.8474 2.35466C17.2287 2.43939 17.5 2.77757 17.5 3.16815V11.4904C17.5 13.1622 16.6645 14.7233 15.2735 15.6507L10 19.1663L4.7265 15.6507C3.33551 14.7233 2.5 13.1622 2.5 11.4904V3.16815C2.5 2.77757 2.77128 2.43939 3.15256 2.35466ZM4.16667 3.83662V11.4904C4.16667 12.6049 4.72367 13.6457 5.651 14.2639L10 17.1633L14.349 14.2639C15.2763 13.6457 15.8333 12.6049 15.8333 11.4904V3.83662L10 2.54033L4.16667 3.83662ZM10 9.16634C8.84942 9.16634 7.91667 8.2336 7.91667 7.08301C7.91667 5.93242 8.84942 4.99967 10 4.99967C11.1506 4.99967 12.0833 5.93242 12.0833 7.08301C12.0833 8.2336 11.1506 9.16634 10 9.16634ZM6.27288 13.333C6.48016 11.458 8.06977 9.99967 10 9.99967C11.9303 9.99967 13.5198 11.458 13.7271 13.333H6.27288Z"
+                  fill="#1E2E47"
+                />
+
+                <path
+                  d="M3.15256 2.35466L10 0.833008L16.8474 2.35466C17.2287 2.43939 17.5 2.77757 17.5 3.16815V11.4904C17.5 13.1622 16.6645 14.7233 15.2735 15.6507L10 19.1663L4.7265 15.6507C3.33551 14.7233 2.5 13.1622 2.5 11.4904V3.16815C2.5 2.77757 2.77128 2.43939 3.15256 2.35466ZM4.16667 3.83662V11.4904C4.16667 12.6049 4.72367 13.6457 5.651 14.2639L10 17.1633L14.349 14.2639C15.2763 13.6457 15.8333 12.6049 15.8333 11.4904V3.83662L10 2.54033L4.16667 3.83662ZM10 9.16634C8.84942 9.16634 7.91667 8.2336 7.91667 7.08301C7.91667 5.93242 8.84942 4.99967 10 4.99967C11.1506 4.99967 12.0833 5.93242 12.0833 7.08301C12.0833 8.2336 11.1506 9.16634 10 9.16634ZM6.27288 13.333C6.48016 11.458 8.06977 9.99967 10 9.99967C11.9303 9.99967 13.5198 11.458 13.7271 13.333H6.27288Z"
+                  fill="url(#paint0_linear_576_441)"
+                />
+
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_576_441"
+                    x1="5.3099"
+                    y1="5.31283"
+                    x2="17.0286"
+                    y2="19.6357"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#488EFF" />
+                    <stop offset="1" stop-color="#0F3D85" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              Экспертам
+            </button>
+          </div>
+
+          <div class="FAQ__content">
+            <div class="FAQ__block tab-block tab-block--active"></div>
+
+            <div class="FAQ__block tab-block"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="video">
+        <div class="video__container container">
+          <div class="video__header">
+            <h2>Иногда один разговор меняет направление бизнеса</h2>
+
+            <p class="subtitle">
+              Если после просмотра сайта у вас появились вопросы, идеи или желание познакомиться —
+              буду рад открытому диалогу
+            </p>
+          </div>
+
+          <div class="video__content">
+            <div class="video__wrap">
+              <video src=""></video>
+
+              <button class="video-play">
+                <div class="icon">
+                  <svg
+                    width="31"
+                    height="31"
+                    viewBox="0 0 31 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7.56641 25.4672V4.79814C7.56641 3.80774 8.65582 3.20393 9.49568 3.72884L26.031 14.0634C26.8212 14.5572 26.8212 15.7081 26.031 16.202L9.49568 26.5365C8.65582 27.0615 7.56641 26.4577 7.56641 25.4672Z"
+                      fill="url(#paint0_linear_576_1046)"
+                    />
+                    <defs>
+                      <linearGradient
+                        id="paint0_linear_576_1046"
+                        x1="16.2222"
+                        y1="-33.9497"
+                        x2="66.7282"
+                        y2="8.94923"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#4C9CFF" />
+                        <stop offset="1" stop-color="#1560BD" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </button>
+
+              <img class="video-preview" src="./src/assets/img/video_preview.png" />
+
+              <div class="video-info">
+                <p class="name">Александр Репин</p>
+
+                <p class="description">
+                  О моей философии, опыте и о том, как мы в Trend Pro помогаем бизнесу расти
+                  системно.
+                </p>
+
+                <p class="time">
+                  <img src="./src/assets/img/time.svg" alt="" />
+
+                  2 мин 32 сек
+                </p>
+              </div>
+            </div>
+
+            <button class="primary-button">
+              <div class="icon">
+                <svg
+                  width="19"
+                  height="16"
+                  viewBox="0 0 19 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M16.7344 0.141402C16.7556 0.132721 18.4154 -0.540968 18.2764 1.13066C18.2296 1.8235 17.8564 4.24887 17.4824 6.87187L16.3135 14.6434C16.0178 16.8939 14.0754 15.8288 13.0879 15.0887C12.9008 14.9401 9.58166 12.7127 8.3662 11.6238C8.03903 11.3269 7.6653 10.7326 8.41307 10.0398C10.0958 8.40655 12.1058 6.37757 13.3213 5.09062C13.8821 4.49679 14.4435 3.11121 12.1064 4.79375L5.51463 9.49589C5.49465 9.50887 4.74759 9.98417 3.36424 9.54472C1.962 9.09925 0.326157 8.50566 0.326157 8.50566C0.311939 8.49617 -0.783188 7.7583 1.12108 6.97148C3.97891 5.73508 14.3221 1.19908 16.7344 0.141402Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              Написать Александру
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="final__container container">
+          <h2>Бизнес – это система. Мы помогаем собрать её воедино.</h2>
+
+          <p class="subtitle">
+            В правильном окружении, с опытом и поддержкой появляется целостный взгляд, который
+            помогает собрать все элементы бизнеса воедино
+          </p>
+
+          <button class="primary-button">
+            <div class="icon">
+              <svg
+                width="19"
+                height="16"
+                viewBox="0 0 19 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.7344 0.141402C16.7556 0.132721 18.4154 -0.540968 18.2764 1.13066C18.2296 1.8235 17.8564 4.24887 17.4824 6.87187L16.3135 14.6434C16.0178 16.8939 14.0754 15.8288 13.0879 15.0887C12.9008 14.9401 9.58166 12.7127 8.3662 11.6238C8.03903 11.3269 7.6653 10.7326 8.41307 10.0398C10.0958 8.40655 12.1058 6.37757 13.3213 5.09062C13.8821 4.49679 14.4435 3.11121 12.1064 4.79375L5.51463 9.49589C5.49465 9.50887 4.74759 9.98417 3.36424 9.54472C1.962 9.09925 0.326157 8.50566 0.326157 8.50566C0.311939 8.49617 -0.783188 7.7583 1.12108 6.97148C3.97891 5.73508 14.3221 1.19908 16.7344 0.141402Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            Начать сборку
+          </button>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrap footer__wrap-top">
+          <div class="footer__info">
+            <img src="./src/assets/img/header_logo.png" alt="" />
+
+            <a class="footer__phone" href="tel:+8 999 651-66-66">8 999 651-66-66</a>
+
+            <a class="footer__mail" href="mailto:info@trendpro.ru">info@trendpro.ru</a>
+
+            <div class="footer__links">
+              <a href="">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="20.5" cy="20.5" r="20" stroke="#98B7FF" stroke-opacity="0.65" />
+                  <path
+                    d="M12.0713 20.4248C12.0748 12.9974 21.0869 9.17841 26.5322 14.4434L26.5215 14.4707C28.1185 16.0616 28.9971 18.1791 28.9971 20.4287C28.9942 26.8382 22.0846 30.8546 16.4863 27.8301L12 29L13.2012 24.6357C12.4605 23.3574 12.0714 21.9093 12.0713 20.4248ZM17.7891 16.0176C17.3624 15.9775 17.0503 15.984 16.7754 16.2939C15.5796 17.7186 15.8811 19.1882 16.9043 20.751C18.9157 23.6038 19.9878 24.1291 21.9473 24.8584C22.4761 25.0406 22.9583 25.0154 23.3398 24.9561C23.7652 24.883 24.6494 24.3767 24.834 23.8105C25.023 23.2443 25.0234 22.7744 24.9678 22.666C24.9129 22.5576 24.7672 22.4971 24.5449 22.3887L24.5391 22.4492C22.9094 21.5689 22.7388 21.4518 22.5283 21.7939C22.3823 22.0309 21.9563 22.5685 21.8281 22.7275C21.6986 22.8837 21.5695 22.8954 21.3496 22.7871C21.1271 22.6666 20.413 22.4138 19.5684 21.5947C18.9104 20.9562 18.4693 20.1726 18.3389 19.9316C18.122 19.5255 18.5758 19.4678 18.9893 18.6201C19.0633 18.4516 19.0255 18.3188 18.9707 18.1992C18.9151 18.0787 18.4724 16.8974 18.2871 16.4268C18.1093 15.9581 17.9261 16.0176 17.7891 16.0176Z"
+                    fill="#98B7FF"
+                  />
+                </svg>
+              </a>
+
+              <a href="">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="20.5" cy="20.5" r="20" stroke="#98B7FF" stroke-opacity="0.65" />
+                  <path
+                    d="M25.6433 14.1237C25.6551 14.1189 27.115 13.5231 26.9929 14.9899C26.9519 15.5966 26.6248 17.7189 26.2976 20.0143L25.2751 26.8161C25.0165 28.786 23.3171 27.8535 22.4529 27.2057C22.2892 27.0757 19.3847 25.1266 18.321 24.1735C18.0347 23.9136 17.7075 23.3932 18.362 22.7868C19.8345 21.3572 21.5934 19.5811 22.657 18.4548C23.1477 17.9349 23.638 16.7228 21.5935 18.195L15.8259 22.3102C15.8259 22.3102 15.1712 22.7441 13.9441 22.3542C12.7169 21.9643 11.2849 21.444 11.2849 21.444C11.2615 21.4283 10.3247 20.7858 11.9812 20.1013C14.4826 19.0188 23.5325 15.0494 25.6433 14.1237Z"
+                    fill="#98B7FF"
+                  />
+                </svg>
+              </a>
+
+              <a href="">
+                <svg
+                  width="41"
+                  height="41"
+                  viewBox="0 0 41 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="20.5" cy="20.5" r="20" stroke="#98B7FF" stroke-opacity="0.65" />
+                  <path
+                    d="M20.6377 12.0029C25.3244 12.0029 28.9971 15.8225 28.9971 20.5264C29.0126 25.1573 25.2928 28.9265 20.6826 28.9512C19.0149 28.9512 18.2397 28.7068 16.8926 27.7285C16.0404 28.829 13.3424 29.6891 13.2246 28.2178C13.2246 27.1131 12.981 26.1792 12.7051 25.1602C12.3764 23.9049 12.003 22.5069 12.0029 20.4814C12.0029 15.6432 15.9552 12.0031 20.6377 12.0029ZM20.752 16.1846C18.4715 16.0664 16.6945 17.6524 16.3008 20.1387C15.9762 22.1971 16.552 24.7045 17.043 24.835C17.2784 24.8917 17.8711 24.4109 18.2402 24.04C18.8507 24.4636 19.5622 24.7178 20.3018 24.7773C22.6644 24.8913 24.683 23.0846 24.8418 20.7139C24.9342 18.3379 23.1151 16.3256 20.752 16.1895V16.1846Z"
+                    fill="#98B7FF"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <nav class="footer__nav nav">
+            <div class="nav__wrap">
+              <h4>Навигация</h4>
+
+              <ul class="nav__list list">
+                <li class="list__item">
+                  <a href="">
+                    Главная
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    О проекте
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Кейсы
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Сообщество
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    FAQ
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav__wrap">
+              <h4>Направления</h4>
+
+              <ul class="nav__list list">
+                <li class="list__item">
+                  <a href="">
+                    Упаковка бизнеса
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Маркетинг
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Автоматизация
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Команда и HR
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Все услуги
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="nav__wrap">
+              <h4>Материалы</h4>
+
+              <ul class="nav__list list">
+                <li class="list__item">
+                  <a href="">
+                    База знаний
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Видео
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Кейсы
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Полезные материалы
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="">
+                    Все услугиОтзывы
+
+                    <svg
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.45059 0.84961C9.45059 0.380168 9.07003 -0.00039025 8.60059 -0.000390438L0.950586 -0.000390803C0.481144 -0.000390485 0.100586 0.380167 0.100586 0.849609C0.100586 1.31905 0.481144 1.69961 0.950586 1.69961L7.75059 1.69961L7.75059 8.49961C7.75059 8.96905 8.13114 9.34961 8.60059 9.34961C9.07003 9.34961 9.45059 8.96905 9.45059 8.49961L9.45059 0.84961ZM0.600586 8.84961L1.20163 9.45065L9.20163 1.45065L8.60059 0.84961L7.99955 0.248569L-0.000454833 8.24857L0.600586 8.84961Z"
+                        fill="#98B7FF"
+                        fill-opacity="0.65"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div class="footer__wrap footer__wrap-bottom">
+          <p>© 2026 TrendPro. Все права защищены.</p>
+
+          <a href="">Реквизиты компании</a>
+
+          <a href="">Политика конфиденциальности</a>
+
+          <a href="">Политика Cookie-файлов</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
