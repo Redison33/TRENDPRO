@@ -1,8 +1,5 @@
 .hero {
   padding: 150px 0;
-  background-image: url('../../assets/img/hero_bg.png');
-  background-repeat: no-repeat;
-  background-position: center right;
   margin-bottom: 32px;
 
   &__container {
@@ -37,6 +34,7 @@
     }
 
     .hero__info {
+      z-index: 1;
       position: absolute;
       border-radius: 16px;
       padding: 16px;
@@ -80,6 +78,16 @@
         right: 510px;
         top: 30px;
       }
+    }
+
+    .hero__decor {
+      position: absolute;
+      right: -40px;
+      top: -75px;
+      width: 615px;
+      height: 615px;
+      background-image: url('../../assets/img/hero_bg.png');
+      background-repeat: no-repeat;
     }
   }
 }
@@ -896,6 +904,15 @@
 .FAQ {
   padding: 72px 0;
   margin-bottom: 32px;
+  background-image:
+    url('../../assets/img/FAQ_bg_1.png'), url('../../assets/img/FAQ_bg_2.png'),
+    url('../../assets/img/FAQ_bg_3.png');
+  background-repeat: no-repeat;
+
+  background-position:
+    left top 410px,
+    left 36px top 400px,
+    right top 260px;
 
   &__container {
     max-width: 1130px;
@@ -910,6 +927,7 @@
     }
 
     .FAQ__tabs {
+      width: 400px;
       position: relative;
       z-index: 1;
       display: flex;
@@ -918,7 +936,6 @@
     }
 
     .FAQ__content {
-      // height: 665px;
       position: relative;
       transition: height 0.3s ease-in-out;
 
@@ -933,7 +950,7 @@
         gap: 16px;
         opacity: 0;
         transform: scale(0);
-        // transform: translateX(-100%);
+        transform: translateX(-100%);
         transition:
           opacity 0.3s ease-in-out,
           transform 0.3s ease-in-out;
@@ -964,6 +981,7 @@
               display: flex;
               flex-direction: column;
               gap: 10px;
+              margin-bottom: 32px;
               list-style: none;
 
               li {
@@ -1008,9 +1026,29 @@
                     background-color: #f4f6ff;
                   }
                 }
+              }
+            }
 
-                &:nth-child(n + 7) {
-                  display: none;
+            .button-more {
+              display: flex;
+              gap: 8px;
+              color: #36383a99;
+              font-weight: $weight-medium;
+              font-size: $fz-body;
+              line-height: 125%;
+              letter-spacing: 0%;
+              text-decoration: underline;
+              text-decoration-style: solid;
+              text-decoration-offset: 23.5%;
+              text-decoration-thickness: 7%;
+
+              svg {
+                transition: transform 0.3s ease-in-out;
+              }
+
+              &--active {
+                svg {
+                  transform: rotate(180deg);
                 }
               }
             }
