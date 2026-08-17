@@ -57,24 +57,24 @@ h5 {
 }
 
 h1 {
-  font-size: $fz-h1;
+  font-size: var(--fz-h1);
 }
 h2 {
-  font-size: $fz-h2;
+  font-size: var(--fz-h2);
   text-align: center;
 }
 h3 {
-  font-size: $fz-h3;
+  font-size: var(--fz-h3);
 }
 h4 {
-  font-size: $fz-h4;
+  font-size: var(--fz-h4);
   font-family: $font-main;
   font-weight: $weight-medium;
   line-height: 120%;
   letter-spacing: 0%;
 }
 h5 {
-  font-size: $fz-h5;
+  font-size: var(--fz-h5);
   font-family: $font-main;
 }
 

@@ -24,7 +24,7 @@
 @mixin base-button {
   background: #fff;
   padding: 4px 24px 4px 4px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: $font-main;

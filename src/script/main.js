@@ -1,7 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // for (const tab of document.querySelector('.questions__tabs').querySelectorAll('.tab')) {
+  if (document.querySelector('.team')) {
+    const team = document.querySelector('.team');
 
-  // }
+    const details = document.querySelectorAll('.card__profile');
+    const tabs = document.querySelectorAll('.slide__profile');
+
+    tabs.forEach((tab, index) => {
+      tab.querySelector('.img-container').addEventListener('click', () => {
+        tabs.forEach((tab) => {
+          tab.classList.remove('slide__profile--active');
+        });
+
+        details.forEach((detail) => {
+          detail.classList.remove('profile--active');
+        });
+
+        tab.classList.add('slide__profile--active');
+
+        if (details[index]) {
+          details[index].classList.add('profile--active');
+        }
+      });
+    });
+  }
 
   if (document.querySelector('.questions')) {
     const questions = document.querySelector('.questions');
@@ -36,7 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const swiper = new Swiper('.swiper', {
-    loop: true,
+    loop: false,
+    slidesPerView: 3,
+    spaceBetween: 4,
 
     pagination: {
       el: '.swiper-pagination',
@@ -47,64 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     },
   });
-
-  // FAQ
-
-  // const MAX_VISIBLE = 6;
-
-  // document
-  //   .querySelector('.FAQ')
-  //   .querySelectorAll('.tab-block')
-  //   .forEach((tabBlock) => {
-  //     const items = tabBlock.querySelectorAll('ol > li');
-  //     const button = tabBlock.querySelector('.button-more');
-
-  //     items.forEach((item, index) => {
-  //       item.style.display = index < MAX_VISIBLE ? '' : 'none';
-  //     });
-
-  //     button.addEventListener('click', () => {
-  //       if (button.classList.contains('button-more--active')) {
-  //         items.forEach((item, index) => {
-  //           if (index > 5) {
-  //             item.style.display = 'none';
-  //           }
-  //         });
-
-  //         const faqContent = tabBlock.closest('.FAQ__content');
-  //         faqContent.style.height = `601px`; // Тут должен быть baseHeight
-  //       } else {
-  //         button.classList.add('button-more--active');
-
-  //         items.forEach((item) => {
-  //           item.style.display = 'block';
-  //         });
-
-  //         const faqContent = tabBlock.closest('.FAQ__content');
-  //         faqContent.style.height = `${tabBlock.scrollHeight}px`;
-  //       }
-  //     });
-  //   });
-
-  // function resetMoreAccordions(tabBlock) {
-  //   const items = tabBlock.querySelectorAll('ol > li');
-  //   const button = tabBlock.querySelector('button');
-
-  //   items.forEach((item, index) => {
-  //     item.style.display = index < MAX_VISIBLE ? 'block' : 'none';
-  //   });
-
-  //   if (items.length > MAX_VISIBLE) {
-  //     button.style.display = '';
-  //   }
-
-  //   // Если был открыт какой-то аккордеон
-  //   tabBlock.querySelectorAll('.accordion').forEach((accordion) => {
-  //     accordion.classList.remove('accordion--active');
-  //     accordion.querySelector('.accordion__button').classList.remove('accordion__button--active');
-  //     accordion.querySelector('.accordion__content').removeAttribute('style');
-  //   });
-  // }
 
   const FAQ = document.querySelector('.FAQ');
 

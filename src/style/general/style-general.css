@@ -34,6 +34,23 @@
   font-weight: 700;
   font-style: normal;
 }
+:root {
+  --fz-h1: 50px;
+  --fz-h2: 40px;
+  --fz-h3: 32px;
+  --fz-h4: 24px;
+  --fz-h5: 18px;
+}
+
+@media (max-width: 1240px) {
+  :root {
+    --fz-h1: 46px;
+    --fz-h2: 36px;
+    --fz-h3: 32px;
+    --fz-h4: 20px;
+    --fz-h5: 18px;
+  }
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -95,20 +112,20 @@ h5 {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: var(--fz-h1);
 }
 
 h2 {
-  font-size: 40px;
+  font-size: var(--fz-h2);
   text-align: center;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: var(--fz-h3);
 }
 
 h4 {
-  font-size: 24px;
+  font-size: var(--fz-h4);
   font-family: "Onest", sans-serif;
   font-weight: 500;
   line-height: 120%;
@@ -116,7 +133,7 @@ h4 {
 }
 
 h5 {
-  font-size: 18px;
+  font-size: var(--fz-h5);
   font-family: "Onest", sans-serif;
 }
 
@@ -132,7 +149,7 @@ h5 {
 .primary-button {
   background: #fff;
   padding: 4px 24px 4px 4px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: "Onest", sans-serif;
@@ -155,7 +172,7 @@ h5 {
 .secondary-button {
   background: #fff;
   padding: 4px 24px 4px 4px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   font-family: "Onest", sans-serif;

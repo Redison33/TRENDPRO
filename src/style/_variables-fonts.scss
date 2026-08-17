@@ -1,10 +1,28 @@
 // Font-size
 
-$fz-h1: 50px; //
-$fz-h2: 40px; //
-$fz-h3: 32px; //
-$fz-h4: 24px; //
-$fz-h5: 18px; //
+// $fz-h1: 50px; // 46
+// $fz-h2: 40px; // 36
+// $fz-h3: 32px; // 32
+// $fz-h4: 24px; // 20
+// $fz-h5: 18px; // 18
+
+:root {
+  --fz-h1: 50px;
+  --fz-h2: 40px;
+  --fz-h3: 32px;
+  --fz-h4: 24px;
+  --fz-h5: 18px;
+}
+
+@media (max-width: 1240px) {
+  :root {
+    --fz-h1: 46px;
+    --fz-h2: 36px;
+    --fz-h3: 32px;
+    --fz-h4: 20px;
+    --fz-h5: 18px;
+  }
+}
 
 $fz-body-lg: 18px;
 $fz-subtitle: 16px;
