@@ -1,4 +1,83 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll(
+    '.tools, .questions, .team, .plan, .social, .practical',
+  );
+
+  if (!sections.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (prefersReducedMotion.matches) {
+    sections.forEach((section) => {
+      section.classList.add('is-visible');
+    });
+
+    return;
+  }
+
+  const sectionObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const section = entry.target;
+        section.classList.add('is-visible');
+        observer.unobserve(section);
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '0px 0px -5% 0px',
+    },
+  );
+
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+
+  if (document.querySelector('.header__burger')) {
+    document.querySelector('.header__burger').addEventListener('click', () => {
+      document.querySelector('.burger-menu').style.transform = 'scale(1)';
+    });
+  }
+
+  if (document.querySelector('.burger-menu')) {
+    const accordions = document.querySelector('.burger-menu').querySelectorAll('.accordion');
+
+    document
+      .querySelector('.burger-menu')
+      .querySelector('.burger-menu__close')
+      .addEventListener('click', () =>
+        document.querySelector('.burger-menu').removeAttribute('style'),
+      );
+
+    accordions.forEach((accordion) => {
+      const button = accordion.querySelector('.accordion__button');
+      const content = accordion.querySelector('.accordion__content');
+
+      accordions[0].classList.add('accordion--active');
+      accordions[0].querySelector('.accordion__button').classList.add('accordion__button--active');
+      accordions[0].querySelector('.accordion__content').style.height = `${content.scrollHeight}px`;
+
+      button.addEventListener('click', () => {
+        const isActive = button.classList.contains('accordion__button--active');
+
+        accordions.forEach((item) => {
+          item.classList.remove('accordion--active');
+
+          item.querySelector('.accordion__button').classList.remove('accordion__button--active');
+
+          item.querySelector('.accordion__content').removeAttribute('style');
+        });
+
+        if (!isActive) {
+          accordion.classList.add('accordion--active');
+          button.classList.add('accordion__button--active');
+          content.style.height = `${content.scrollHeight}px`;
+        }
+      });
+    });
+  }
+
   if (document.querySelector('.team')) {
     const team = document.querySelector('.team');
 
