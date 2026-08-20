@@ -30,6 +30,74 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   );
 
+  const practicalSection = document.querySelector('.practical');
+
+  if (practicalSection) {
+    const practicalCounters = practicalSection.querySelectorAll('.practical__info li p');
+
+    const counterValues = [120, 15, 250];
+    const counterSuffixes = ['+', '', '+'];
+
+    let countersStarted = false;
+
+    const animateCounter = (element, target, suffix = '', duration = 1100) => {
+      const startTime = performance.now();
+
+      const easeOutCubic = (progress) => {
+        return 1 - Math.pow(1 - progress, 3);
+      };
+
+      const updateCounter = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutCubic(progress);
+
+        const currentValue = Math.floor(target * easedProgress);
+
+        element.textContent = `${currentValue}${suffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          element.textContent = `${target}${suffix}`;
+        }
+      };
+
+      requestAnimationFrame(updateCounter);
+    };
+
+    const startPracticalCounters = () => {
+      if (countersStarted) return;
+
+      countersStarted = true;
+
+      practicalCounters.forEach((counter, index) => {
+        animateCounter(counter, counterValues[index], counterSuffixes[index], 1100);
+      });
+    };
+
+    const practicalObserver = new MutationObserver(() => {
+      if (!practicalSection.classList.contains('is-visible')) return;
+
+      practicalObserver.disconnect();
+
+      setTimeout(() => {
+        startPracticalCounters();
+      }, 1000);
+    });
+
+    practicalObserver.observe(practicalSection, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
+
+    if (practicalSection.classList.contains('is-visible')) {
+      setTimeout(() => {
+        startPracticalCounters();
+      }, 1000);
+    }
+  }
+
   sections.forEach((section) => {
     sectionObserver.observe(section);
   });
@@ -76,6 +144,78 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+  }
+
+  if (document.querySelector('.tools')) {
+    const tools = document.querySelector('.tools');
+    const decorLarge = tools.querySelector('.tools__decor-2');
+    const decorCube = tools.querySelector('.tools__decor-1');
+
+    if (decorLarge && decorCube) {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      if (!prefersReducedMotion.matches) {
+        let targetX = 0;
+        let targetY = 0;
+
+        let currentLargeX = 0;
+        let currentLargeY = 0;
+
+        let currentCubeX = 0;
+        let currentCubeY = 0;
+
+        let animationFrame = null;
+
+        const animate = () => {
+          currentLargeX += (targetX * 10 - currentLargeX) * 0.08;
+          currentLargeY += (targetY * 10 - currentLargeY) * 0.08;
+
+          currentCubeX += (targetX * 15 - currentCubeX) * 0.08;
+          currentCubeY += (targetY * 15 - currentCubeY) * 0.08;
+
+          decorLarge.style.transform = `translate3d(${currentLargeX}px, ${currentLargeY}px, 0)`;
+          decorCube.style.transform = `translate3d(${currentCubeX}px, ${currentCubeY}px, 0)`;
+
+          const isMoving =
+            Math.abs(targetX * 10 - currentLargeX) > 0.01 ||
+            Math.abs(targetY * 10 - currentLargeY) > 0.01 ||
+            Math.abs(targetX * 15 - currentCubeX) > 0.01 ||
+            Math.abs(targetY * 15 - currentCubeY) > 0.01;
+
+          if (isMoving) {
+            animationFrame = requestAnimationFrame(animate);
+          } else {
+            animationFrame = null;
+          }
+        };
+
+        const handleMouseMove = (event) => {
+          const rect = tools.getBoundingClientRect();
+
+          const x = (event.clientX - rect.left) / rect.width;
+          const y = (event.clientY - rect.top) / rect.height;
+
+          targetX = (x - 0.5) * 2;
+          targetY = (y - 0.5) * 2;
+
+          if (!animationFrame) {
+            animationFrame = requestAnimationFrame(animate);
+          }
+        };
+
+        const resetParallax = () => {
+          targetX = 0;
+          targetY = 0;
+
+          if (!animationFrame) {
+            animationFrame = requestAnimationFrame(animate);
+          }
+        };
+
+        tools.addEventListener('mousemove', handleMouseMove);
+        tools.addEventListener('mouseleave', resetParallax);
+      }
+    }
   }
 
   if (document.querySelector('.team')) {
@@ -153,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const FAQ = document.querySelector('.FAQ');
 
   if (FAQ) {
-    const MAX_VISIBLE = 6;
+    const MAX_VISIBLE = 5;
 
     const tabs = FAQ.querySelector('.FAQ__tabs');
     const contents = FAQ.querySelector('.FAQ__content');
@@ -189,6 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       button.classList.remove('button-more--active');
+      button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
 
       tabBlock.querySelectorAll('.accordion').forEach((accordion) => {
         accordion.classList.remove('accordion--active');
@@ -213,8 +354,10 @@ document.addEventListener('DOMContentLoaded', () => {
           contents.style.height = baseHeight + 'px';
 
           button.classList.remove('button-more--active');
+          button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
         } else {
           button.classList.add('button-more--active');
+          button.querySelector('span').textContent = 'Скрыть';
 
           items.forEach((item) => {
             item.style.display = 'block';
