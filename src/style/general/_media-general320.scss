@@ -1,0 +1,215 @@
+@media (max-width: 720px) {
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .header {
+    &__container {
+      .header__logo {
+      }
+
+      .header__actions {
+        .secondary-button {
+          display: none;
+          .icon {
+          }
+        }
+
+        .header__burger {
+          span {
+          }
+        }
+      }
+    }
+  }
+
+  .burger-menu {
+    &__container {
+      width: 100%;
+      gap: 38px;
+      border-radius: unset;
+
+      .burger-menu__header {
+        img {
+          width: 155px;
+        }
+
+        button {
+        }
+      }
+
+      .burger-menu__content {
+        height: 100%;
+        ul {
+          height: calc(100% - 80px);
+          overflow-y: auto;
+          padding-right: 5px;
+
+          li {
+            .accordion {
+              &__button {
+                .icon {
+                }
+              }
+
+              &__content {
+                nav {
+                  padding: 16px 32px;
+
+                  ul {
+                    gap: 16px;
+
+                    li {
+                      a {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .secondary-button {
+          margin-top: auto;
+
+          span {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      .footer__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+
+        &-top {
+          padding: 32px 0;
+
+          .footer__info {
+            width: 100%;
+            grid-area: unset;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
+
+            img {
+              margin: 0;
+            }
+
+            .footer__contacts {
+              align-items: center;
+            }
+
+            .footer__phone {
+              font-size: 32px;
+            }
+
+            .footer__mail {
+            }
+
+            .footer__links {
+              margin-top: unset;
+              justify-content: end;
+            }
+          }
+
+          .nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 320px;
+            // display: none;
+
+            .accordion {
+              width: 100%;
+              button {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #fdfdfd;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: $weight-semibold;
+                line-height: 125%;
+                letter-spacing: -0.16px;
+                padding: 6px 6px 6px 20px;
+                border-radius: 30px;
+                background: rgba(152, 183, 255, 0.25);
+                margin: 0;
+
+                .icon {
+                  display: flex;
+                }
+              }
+
+              &__content {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.3s ease-in-out;
+              }
+
+              .list {
+                &__item {
+                  a {
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          padding: 32px 0;
+          gap: 6px;
+
+          p,
+          a {
+            font-size: 12px;
+          }
+
+          :nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes hero-cube {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.94);
+    }
+
+    15% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    20% {
+      transform: translateY(0) scale(1);
+    }
+
+    65% {
+      transform: translateY(-6px) scale(1);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}

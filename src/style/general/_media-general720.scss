@@ -1,0 +1,151 @@
+@media (max-width: 1000px) {
+  .header {
+    &__container {
+      .header__logo {
+      }
+
+      .header__nav {
+        display: none;
+      }
+
+      .header__actions {
+        .secondary-button {
+          .icon {
+          }
+        }
+
+        .header__burger {
+          span {
+          }
+        }
+      }
+    }
+  }
+
+  .burger-menu {
+    &__container {
+      padding: 30px;
+
+      gap: 38px;
+
+      .burger-menu__header {
+        img {
+          width: 155px;
+        }
+
+        button {
+        }
+      }
+
+      .burger-menu__content {
+        ul {
+          gap: 8px;
+
+          li {
+            .accordion {
+              &__button {
+                .icon {
+                }
+              }
+
+              &__content {
+                nav {
+                  padding: 16px 32px;
+
+                  ul {
+                    gap: 16px;
+
+                    li {
+                      a {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .secondary-button {
+          margin-top: auto;
+
+          span {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      .footer__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        justify-content: space-between;
+
+        &-top {
+          padding: 32px 0;
+
+          .footer__info {
+            grid-area: 1 / 1 / 2 / 4;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
+
+            img {
+              margin: 0;
+            }
+
+            .footer__phone {
+              font-size: 20px;
+            }
+
+            .footer__mail {
+            }
+
+            .footer__links {
+              margin-top: unset;
+              justify-content: end;
+            }
+          }
+
+          .nav {
+            display: contents;
+
+            .accordion {
+              button {
+                font-size: 18px;
+                margin-bottom: 32px;
+              }
+
+              .list {
+                &__item {
+                  a {
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          padding: 20px 0;
+
+          p,
+          a {
+            font-size: 10px;
+          }
+
+          :nth-child(2) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

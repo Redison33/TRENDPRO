@@ -106,6 +106,7 @@
 
           li {
             .card {
+              border: 1px solid #e5eefd;
               &__number {
               }
 
@@ -158,7 +159,6 @@
 
     &__container {
       max-width: 980px;
-      margin: 0 auto;
 
       .questions__header {
       }
@@ -528,8 +528,8 @@
     padding: 72px 0;
     margin-bottom: 32px;
     background-image:
-      url("../../assets/img/FAQ_bg_1.png"),
-      url("../../assets/img/FAQ_bg_2.png"), url("../../assets/img/FAQ_bg_3.png");
+      url('../../assets/img/FAQ_bg_1.png'), url('../../assets/img/FAQ_bg_2.png'),
+      url('../../assets/img/FAQ_bg_3.png');
     background-repeat: no-repeat;
 
     background-position:
@@ -822,6 +822,7 @@
 
   .questions {
     &__container {
+      max-width: 960px;
       .questions__header {
       }
 
@@ -830,6 +831,7 @@
       }
 
       .questions__content {
+        height: 800px;
         .tab-block {
           gap: 16px;
           &__wrap {

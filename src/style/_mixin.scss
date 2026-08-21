@@ -24,9 +24,9 @@
     margin: 0 auto;
   }
 
-  // @media (max-width: 600px) {
-  //   margin: 0 20px;
-  // }
+  @media (max-width: 720px) {
+    margin: 0 15px;
+  }
 }
 
 @mixin base-button {
@@ -59,7 +59,7 @@
     align-items: center;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0;
       background: #fff;
@@ -108,7 +108,7 @@
   color: #ffffff;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     background: #1560bd;
@@ -168,6 +168,18 @@
   svg {
     linearGradient {
       display: none;
+    }
+  }
+
+  @media (max-width: 720px) {
+    gap: 5px;
+    font-size: 12px;
+    padding: 16px 10px;
+    justify-content: center;
+
+    svg {
+      width: 9px;
+      height: 9px;
     }
   }
 }

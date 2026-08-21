@@ -1,50 +1,48 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll(
-    ".tools, .questions, .team, .plan, .social, .practical",
+    '.tools, .questions, .team, .plan, .social, .practical',
   );
 
   if (!sections.length) return;
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  );
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   if (prefersReducedMotion.matches) {
     sections.forEach((section) => {
-      section.classList.add("is-visible");
+      section.classList.add('is-visible');
     });
 
     return;
   }
+
+  const isMobile = window.matchMedia('(max-width: 700px)');
 
   const sectionObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const section = entry.target;
-        section.classList.add("is-visible");
+        section.classList.add('is-visible');
         observer.unobserve(section);
       });
     },
     {
-      threshold: 0.3,
-      rootMargin: "0px 0px -5% 0px",
+      threshold: isMobile.matches ? 0.2 : 0.3,
+      rootMargin: '0px 0px -5% 0px',
     },
   );
 
-  const practicalSection = document.querySelector(".practical");
+  const practicalSection = document.querySelector('.practical');
 
   if (practicalSection) {
-    const practicalCounters = practicalSection.querySelectorAll(
-      ".practical__info li p",
-    );
+    const practicalCounters = practicalSection.querySelectorAll('.practical__info li p');
 
     const counterValues = [120, 15, 250];
-    const counterSuffixes = ["+", "", "+"];
+    const counterSuffixes = ['+', '', '+'];
 
     let countersStarted = false;
 
-    const animateCounter = (element, target, suffix = "", duration = 1100) => {
+    const animateCounter = (element, target, suffix = '', duration = 1100) => {
       const startTime = performance.now();
 
       const easeOutCubic = (progress) => {
@@ -76,17 +74,12 @@ document.addEventListener("DOMContentLoaded", () => {
       countersStarted = true;
 
       practicalCounters.forEach((counter, index) => {
-        animateCounter(
-          counter,
-          counterValues[index],
-          counterSuffixes[index],
-          1100,
-        );
+        animateCounter(counter, counterValues[index], counterSuffixes[index], 1100);
       });
     };
 
     const practicalObserver = new MutationObserver(() => {
-      if (!practicalSection.classList.contains("is-visible")) return;
+      if (!practicalSection.classList.contains('is-visible')) return;
 
       practicalObserver.disconnect();
 
@@ -97,10 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     practicalObserver.observe(practicalSection, {
       attributes: true,
-      attributeFilter: ["class"],
+      attributeFilter: ['class'],
     });
 
-    if (practicalSection.classList.contains("is-visible")) {
+    if (practicalSection.classList.contains('is-visible')) {
       setTimeout(() => {
         startPracticalCounters();
       }, 1000);
@@ -111,68 +104,86 @@ document.addEventListener("DOMContentLoaded", () => {
     sectionObserver.observe(section);
   });
 
-  if (document.querySelector(".header__burger")) {
-    document.querySelector(".header__burger").addEventListener("click", () => {
-      document.body.style.overflow = "hidden";
-      document.querySelector(".burger-menu").style.transform = "scale(1, 1)";
-    });
-  }
-
-  if (document.querySelector(".burger-menu")) {
-    const accordions = document
-      .querySelector(".burger-menu")
-      .querySelectorAll(".accordion");
-
-    document
-      .querySelector(".burger-menu")
-      .querySelector(".burger-menu__close")
-      .addEventListener("click", () => {
-        document.body.removeAttribute("style");
-        document.querySelector(".burger-menu").removeAttribute("style");
-      });
+  if (document.querySelector('.footer__nav')) {
+    const accordions = document.querySelector('.footer__nav').querySelectorAll('.accordion');
 
     accordions.forEach((accordion) => {
-      const button = accordion.querySelector(".accordion__button");
-      const content = accordion.querySelector(".accordion__content");
+      const button = accordion.querySelector('.accordion__button');
+      const content = accordion.querySelector('.accordion__content');
 
-      accordions[0].classList.add("accordion--active");
-      accordions[0]
-        .querySelector(".accordion__button")
-        .classList.add("accordion__button--active");
-      accordions[0].querySelector(".accordion__content").style.height =
-        `${content.scrollHeight}px`;
-
-      button.addEventListener("click", () => {
-        const isActive = button.classList.contains("accordion__button--active");
+      button.addEventListener('click', () => {
+        const isActive = button.classList.contains('accordion__button--active');
 
         accordions.forEach((item) => {
-          item.classList.remove("accordion--active");
+          item.classList.remove('accordion--active');
 
-          item
-            .querySelector(".accordion__button")
-            .classList.remove("accordion__button--active");
+          item.querySelector('.accordion__button').classList.remove('accordion__button--active');
 
-          item.querySelector(".accordion__content").removeAttribute("style");
+          item.querySelector('.accordion__content').removeAttribute('style');
         });
 
         if (!isActive) {
-          accordion.classList.add("accordion--active");
-          button.classList.add("accordion__button--active");
+          accordion.classList.add('accordion--active');
+          button.classList.add('accordion__button--active');
           content.style.height = `${content.scrollHeight}px`;
         }
       });
     });
   }
 
-  if (document.querySelector(".tools")) {
-    const tools = document.querySelector(".tools");
-    const decorLarge = tools.querySelector(".tools__decor-2");
-    const decorCube = tools.querySelector(".tools__decor-1");
+  if (document.querySelector('.header__burger')) {
+    document.querySelector('.header__burger').addEventListener('click', () => {
+      document.body.style.overflow = 'hidden';
+      document.querySelector('.burger-menu').style.transform = 'scale(1, 1)';
+    });
+  }
+
+  if (document.querySelector('.burger-menu')) {
+    const accordions = document.querySelector('.burger-menu').querySelectorAll('.accordion');
+
+    document
+      .querySelector('.burger-menu')
+      .querySelector('.burger-menu__close')
+      .addEventListener('click', () => {
+        document.body.removeAttribute('style');
+        document.querySelector('.burger-menu').removeAttribute('style');
+      });
+
+    accordions.forEach((accordion) => {
+      const button = accordion.querySelector('.accordion__button');
+      const content = accordion.querySelector('.accordion__content');
+
+      accordions[0].classList.add('accordion--active');
+      accordions[0].querySelector('.accordion__button').classList.add('accordion__button--active');
+      accordions[0].querySelector('.accordion__content').style.height = `${content.scrollHeight}px`;
+
+      button.addEventListener('click', () => {
+        const isActive = button.classList.contains('accordion__button--active');
+
+        accordions.forEach((item) => {
+          item.classList.remove('accordion--active');
+
+          item.querySelector('.accordion__button').classList.remove('accordion__button--active');
+
+          item.querySelector('.accordion__content').removeAttribute('style');
+        });
+
+        if (!isActive) {
+          accordion.classList.add('accordion--active');
+          button.classList.add('accordion__button--active');
+          content.style.height = `${content.scrollHeight}px`;
+        }
+      });
+    });
+  }
+
+  if (document.querySelector('.tools')) {
+    const tools = document.querySelector('.tools');
+    const decorLarge = tools.querySelector('.tools__decor-2');
+    const decorCube = tools.querySelector('.tools__decor-1');
 
     if (decorLarge && decorCube) {
-      const prefersReducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      );
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
       if (!prefersReducedMotion.matches) {
         let targetX = 0;
@@ -232,83 +243,81 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         };
 
-        tools.addEventListener("mousemove", handleMouseMove);
-        tools.addEventListener("mouseleave", resetParallax);
+        tools.addEventListener('mousemove', handleMouseMove);
+        tools.addEventListener('mouseleave', resetParallax);
       }
     }
   }
 
-  if (document.querySelector(".team")) {
-    const team = document.querySelector(".team");
+  if (document.querySelector('.team')) {
+    const team = document.querySelector('.team');
 
-    const details = document.querySelectorAll(".card__profile");
-    const tabs = document.querySelectorAll(".slide__profile");
+    const details = document.querySelectorAll('.card__profile');
+    const tabs = document.querySelectorAll('.slide__profile');
 
     tabs.forEach((tab, index) => {
-      tab.querySelector(".img-container").addEventListener("click", () => {
+      tab.querySelector('.img-container').addEventListener('click', () => {
         tabs.forEach((tab) => {
-          tab.classList.remove("slide__profile--active");
+          tab.classList.remove('slide__profile--active');
         });
 
         details.forEach((detail) => {
-          detail.classList.remove("profile--active");
+          detail.classList.remove('profile--active');
         });
 
-        tab.classList.add("slide__profile--active");
+        tab.classList.add('slide__profile--active');
 
         if (details[index]) {
-          details[index].classList.add("profile--active");
+          details[index].classList.add('profile--active');
         }
       });
     });
   }
 
-  if (document.querySelector(".questions")) {
-    const questions = document.querySelector(".questions");
-    const tabs = questions.querySelector(".questions__tabs");
-    const contents = questions.querySelector(".questions__content");
+  if (document.querySelector('.questions')) {
+    const questions = document.querySelector('.questions');
+    const tabs = questions.querySelector('.questions__tabs');
+    const contents = questions.querySelector('.questions__content');
 
-    for (const [index, tab] of tabs.querySelectorAll(".tab").entries()) {
-      tab.addEventListener("click", () => {
-        for (const ostTab of tabs.querySelectorAll(".tab")) {
-          ostTab.classList.remove("tab--active");
+    for (const [index, tab] of tabs.querySelectorAll('.tab').entries()) {
+      tab.addEventListener('click', () => {
+        for (const ostTab of tabs.querySelectorAll('.tab')) {
+          ostTab.classList.remove('tab--active');
         }
 
-        for (const block of contents.querySelectorAll(".tab-block")) {
-          block.classList.remove("tab-block--active");
+        for (const block of contents.querySelectorAll('.tab-block')) {
+          block.classList.remove('tab-block--active');
         }
 
-        tab.classList.add("tab--active");
-        contents
-          .querySelectorAll(".tab-block")
-          [index].classList.add("tab-block--active");
+        tab.classList.add('tab--active');
+        contents.querySelectorAll('.tab-block')[index].classList.add('tab-block--active');
       });
     }
   }
 
-  if (document.querySelector(".video")) {
-    const contents = document.querySelector(".video");
+  if (document.querySelector('.video')) {
+    const contents = document.querySelector('.video');
 
-    contents.querySelector(".video-play").addEventListener("click", () => {
-      contents.querySelector("video").play();
-      contents.querySelector(".video-play").style.display = "none";
-      contents.querySelector(".video-preview").style.display = "none";
-      contents.querySelector(".video-info").style.display = "none";
+    contents.querySelector('.video-play').addEventListener('click', () => {
+      contents.querySelector('video').play();
+      contents.querySelector('.video-play').style.display = 'none';
+      contents.querySelector('.video-preview').style.display = 'none';
+      contents.querySelector('.video-info').style.display = 'none';
     });
   }
 
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper('.swiper', {
     loop: false,
     slidesPerView: 3,
     spaceBetween: 4,
 
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination',
     },
 
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     breakpoints: {
@@ -324,81 +333,77 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const FAQ = document.querySelector(".FAQ");
+  const FAQ = document.querySelector('.FAQ');
 
   if (FAQ) {
     const MAX_VISIBLE = 5;
 
-    const tabs = FAQ.querySelector(".FAQ__tabs");
-    const contents = FAQ.querySelector(".FAQ__content");
-    const accordions = FAQ.querySelectorAll(".accordion");
+    const tabs = FAQ.querySelector('.FAQ__tabs');
+    const contents = FAQ.querySelector('.FAQ__content');
+    const accordions = FAQ.querySelectorAll('.accordion');
 
-    FAQ.querySelectorAll(".tab-block").forEach((tabBlock) => {
-      const items = tabBlock.querySelectorAll("ol > li");
-      const button = tabBlock.querySelector(".button-more");
+    FAQ.querySelectorAll('.tab-block').forEach((tabBlock) => {
+      const items = tabBlock.querySelectorAll('ol > li');
+      const button = tabBlock.querySelector('.button-more');
 
       if (items.length <= 6) {
-        button.style.display = "none";
+        button.style.display = 'none';
       }
 
       items.forEach((item, index) => {
-        item.style.display = index < MAX_VISIBLE ? "block" : "none";
+        item.style.display = index < MAX_VISIBLE ? 'block' : 'none';
       });
     });
 
-    const baseHeight = contents.querySelector(".tab-block").scrollHeight;
+    const baseHeight = contents.querySelector('.tab-block').scrollHeight;
 
     contents.style.height = `${baseHeight}px`;
 
     function resetMoreAccordions(tabBlock) {
-      const items = tabBlock.querySelectorAll("ol > li");
-      const button = tabBlock.querySelector(".button-more");
+      const items = tabBlock.querySelectorAll('ol > li');
+      const button = tabBlock.querySelector('.button-more');
 
       items.forEach((item, index) => {
-        item.style.display = index < MAX_VISIBLE ? "block" : "none";
+        item.style.display = index < MAX_VISIBLE ? 'block' : 'none';
       });
 
       if (items.length > MAX_VISIBLE) {
-        button.style.display = "flex";
+        button.style.display = 'flex';
       }
 
-      button.classList.remove("button-more--active");
-      button.querySelector("span").textContent =
-        "Развернуть еще 5+ вопросов и ответов";
+      button.classList.remove('button-more--active');
+      button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
 
-      tabBlock.querySelectorAll(".accordion").forEach((accordion) => {
-        accordion.classList.remove("accordion--active");
-        accordion
-          .querySelector(".accordion__button")
-          .classList.remove("accordion__button--active");
-        accordion.querySelector(".accordion__content").removeAttribute("style");
+      tabBlock.querySelectorAll('.accordion').forEach((accordion) => {
+        accordion.classList.remove('accordion--active');
+        accordion.querySelector('.accordion__button').classList.remove('accordion__button--active');
+        accordion.querySelector('.accordion__content').removeAttribute('style');
       });
     }
 
-    FAQ.querySelectorAll(".tab-block").forEach((tabBlock) => {
-      const items = tabBlock.querySelectorAll("ol > li");
-      const button = tabBlock.querySelector(".button-more");
+    FAQ.querySelectorAll('.tab-block').forEach((tabBlock) => {
+      const items = tabBlock.querySelectorAll('ol > li');
+      const button = tabBlock.querySelector('.button-more');
 
-      button.addEventListener("click", () => {
-        if (button.classList.contains("button-more--active")) {
+      button.addEventListener('click', () => {
+        if (button.classList.contains('button-more--active')) {
           items.forEach((item, index) => {
             if (index > 5) {
-              item.style.display = "none";
+              item.style.display = 'none';
               resetMoreAccordions(tabBlock);
             }
           });
 
-          contents.style.height = baseHeight + "px";
+          contents.style.height = baseHeight + 'px';
 
-          button.classList.remove("button-more--active");
-          button.querySelector("span").textContent =
-            "Развернуть еще 5+ вопросов и ответов";
+          button.classList.remove('button-more--active');
+          button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
         } else {
-          button.classList.add("button-more--active");
-          button.querySelector("span").textContent = "Скрыть";
+          button.classList.add('button-more--active');
+          button.querySelector('span').textContent = 'Скрыть';
 
           items.forEach((item) => {
-            item.style.display = "block";
+            item.style.display = 'block';
           });
 
           contents.style.height = `${tabBlock.scrollHeight}px`;
@@ -406,56 +411,52 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    for (const [index, tab] of tabs.querySelectorAll(".tab").entries()) {
-      tab.addEventListener("click", () => {
-        for (const ostTab of tabs.querySelectorAll(".tab")) {
-          ostTab.classList.remove("tab--active");
+    for (const [index, tab] of tabs.querySelectorAll('.tab').entries()) {
+      tab.addEventListener('click', () => {
+        for (const ostTab of tabs.querySelectorAll('.tab')) {
+          ostTab.classList.remove('tab--active');
         }
 
-        for (const block of contents.querySelectorAll(".tab-block")) {
-          block.classList.remove("tab-block--active");
+        for (const block of contents.querySelectorAll('.tab-block')) {
+          block.classList.remove('tab-block--active');
         }
 
         contents.style.height = `${baseHeight}px`;
 
-        tab.classList.add("tab--active");
+        tab.classList.add('tab--active');
 
-        contents
-          .querySelectorAll(".tab-block")
-          [index].classList.add("tab-block--active");
+        contents.querySelectorAll('.tab-block')[index].classList.add('tab-block--active');
 
-        const activeBlock = contents.querySelectorAll(".tab-block")[index];
+        const activeBlock = contents.querySelectorAll('.tab-block')[index];
 
         resetMoreAccordions(activeBlock);
       });
     }
 
     accordions.forEach((accordion) => {
-      const button = accordion.querySelector(".accordion__button");
-      const content = accordion.querySelector(".accordion__content");
+      const button = accordion.querySelector('.accordion__button');
+      const content = accordion.querySelector('.accordion__content');
 
-      button.addEventListener("click", () => {
-        const isActive = button.classList.contains("accordion__button--active");
+      button.addEventListener('click', () => {
+        const isActive = button.classList.contains('accordion__button--active');
 
         accordions.forEach((item) => {
-          item.classList.remove("accordion--active");
+          item.classList.remove('accordion--active');
 
-          item
-            .querySelector(".accordion__button")
-            .classList.remove("accordion__button--active");
+          item.querySelector('.accordion__button').classList.remove('accordion__button--active');
 
-          item.querySelector(".accordion__content").removeAttribute("style");
+          item.querySelector('.accordion__content').removeAttribute('style');
         });
 
         if (!isActive) {
-          accordion.classList.add("accordion--active");
-          button.classList.add("accordion__button--active");
-          content.style.paddingTop = "5px";
+          accordion.classList.add('accordion--active');
+          button.classList.add('accordion__button--active');
+          content.style.paddingTop = '5px';
           content.style.height = `${content.scrollHeight}px`;
 
           contents.style.height = `${baseHeight + content.scrollHeight}px`;
         } else {
-          contents.style.height = `${accordion.closest(".tab-block").scrollHeight - content.scrollHeight}px`;
+          contents.style.height = `${accordion.closest('.tab-block').scrollHeight - content.scrollHeight}px`;
         }
       });
     });

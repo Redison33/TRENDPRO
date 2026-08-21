@@ -34,6 +34,16 @@
   }
 }
 
+@media (max-width: 720px) {
+  :root {
+    --fz-h1: 26px;
+    --fz-h2: 22px;
+    --fz-h3: 22px;
+    --fz-h4: 18px;
+    --fz-h5: 16px;
+  }
+}
+
 $fz-body-lg: 18px;
 $fz-subtitle: 16px;
 $fz-body: 16px;
@@ -42,8 +52,8 @@ $fz-body-sm: 14px;
 // $fz-buttons: 16px;
 // $fz-inputs: 16px;
 
-$font-titles: "Unbounded", sans-serif;
-$font-main: "Onest", sans-serif;
+$font-titles: 'Unbounded', sans-serif;
+$font-main: 'Onest', sans-serif;
 
 $weight-regular: 400;
 $weight-medium: 500;
