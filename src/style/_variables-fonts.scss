@@ -14,13 +14,23 @@
   --fz-h5: 18px;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1400px) {
   :root {
     --fz-h1: 46px;
     --fz-h2: 36px;
     --fz-h3: 28px;
     --fz-h4: 20px;
     --fz-h5: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --fz-h1: 36px;
+    --fz-h2: 28px;
+    --fz-h3: 28px;
+    --fz-h4: 18px;
+    --fz-h5: 16px;
   }
 }
 
@@ -32,8 +42,8 @@ $fz-body-sm: 14px;
 // $fz-buttons: 16px;
 // $fz-inputs: 16px;
 
-$font-titles: 'Unbounded', sans-serif;
-$font-main: 'Onest', sans-serif;
+$font-titles: "Unbounded", sans-serif;
+$font-main: "Onest", sans-serif;
 
 $weight-regular: 400;
 $weight-medium: 500;

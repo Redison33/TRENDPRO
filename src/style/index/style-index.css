@@ -6,13 +6,22 @@
   --fz-h5: 18px;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1400px) {
   :root {
     --fz-h1: 46px;
     --fz-h2: 36px;
     --fz-h3: 28px;
     --fz-h4: 20px;
     --fz-h5: 18px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --fz-h1: 36px;
+    --fz-h2: 28px;
+    --fz-h3: 28px;
+    --fz-h4: 18px;
+    --fz-h5: 16px;
   }
 }
 .section-header-anim h2,
@@ -56,10 +65,12 @@
   line-height: 100%;
 }
 .hero__container h1 .line {
+  font-family: "Unbounded", sans-serif;
   display: block;
   overflow: hidden;
 }
 .hero__container h1 .line span {
+  font-family: "Unbounded", sans-serif;
   display: block;
   opacity: 0;
   transform: translateY(24px);
@@ -372,6 +383,17 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+.plan__container .plan__content ol li .card__content h5 {
+  color: #1e2e47;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.plan__container .plan__content ol li .card__content p {
+  color: rgba(19, 50, 122, 0.5);
+  font-size: 16px;
+  line-height: 125%;
 }
 .plan__container .plan__content ol li .card img {
   position: absolute;
@@ -750,6 +772,7 @@
 }
 
 .team {
+  border-radius: 10px 10px 0 0;
   padding: 72px 0;
   margin-bottom: 32px;
   background-image: url("../../assets/img/team_bg_main.png");
@@ -1111,6 +1134,7 @@
 }
 .social__container .scheme {
   position: relative;
+  opacity: 0;
 }
 .social__container .scheme .connections {
   pointer-events: none;
@@ -1252,6 +1276,9 @@
   transform: translateY(20px);
   transition: opacity 150ms ease-out, transform 150ms ease-out;
 }
+.social.is-visible .scheme {
+  opacity: 1;
+}
 .social.is-visible .scheme .connections {
   opacity: 0;
   animation: network-appear 1.1s ease-out 1.8s forwards;
@@ -1326,12 +1353,17 @@
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 .practical__container .practical__cards ul li .card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #e5eefd;
   background: #fff;
   border-radius: 12px;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .practical__container .practical__cards ul li .card__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 30px;
 }
 .practical__container .practical__cards ul li .card__content .company {
@@ -1355,6 +1387,7 @@
   color: rgba(19, 50, 122, 0.5019607843);
 }
 .practical__container .practical__cards ul li .card__content .worker {
+  margin-top: auto;
   padding: 24px 0;
   border-top: 1px solid #e5eefd;
   border-bottom: 1px solid #e5eefd;
@@ -1423,6 +1456,7 @@
   letter-spacing: 0%;
 }
 .practical__container .practical__cards ul li .card a {
+  height: 74px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1579,7 +1613,7 @@
   margin-bottom: 32px;
   background-image: url("../../assets/img/FAQ_bg_1.png"), url("../../assets/img/FAQ_bg_2.png"), url("../../assets/img/FAQ_bg_3.png");
   background-repeat: no-repeat;
-  background-position: left top 410px, left 36px top 400px, right top 260px;
+  background-position: left top 410px, left 36px top 320px, right top 260px;
 }
 .FAQ__container {
   max-width: 1130px;
@@ -1676,6 +1710,13 @@
   height: 0px;
   overflow: hidden;
   transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
+}
+.FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion__content p {
+  width: calc(100% - 50px);
+  color: rgba(19, 50, 122, 0.5);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 125%;
 }
 .FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion--active {
   background-color: #f4f6ff;
@@ -1835,6 +1876,7 @@
 
 .final {
   padding: 88px 0;
+  overflow: hidden;
 }
 .final__container {
   position: relative;
@@ -2123,5 +2165,614 @@
   }
   .final {
     padding: 80px 0;
+  }
+}
+@media (max-width: 1400px) {
+  .hero__container .hero__info {
+    padding: 12px;
+  }
+  .hero__container .hero__info .text {
+    font-size: 12px;
+  }
+  .hero__container .hero__info-1 {
+    right: 35px;
+    top: -60px;
+  }
+  .hero__container .hero__info-2 {
+    right: 445px;
+    top: 20px;
+  }
+  .hero__container .hero__decor {
+    position: absolute;
+    right: -10px;
+    width: 520px;
+    height: 520px;
+    background-size: contain;
+  }
+  .tools__container .tools__content {
+    gap: 8px;
+  }
+  .tools__container .tools__content .card {
+    padding: 15px;
+  }
+  .tools__container .tools__content .card__header {
+    gap: 0;
+    margin-bottom: 12px;
+    padding: 0 15px;
+  }
+  .tools__container .tools__content .card__header h5 {
+    margin-left: 16px;
+  }
+  .tools__container .tools__content .card p {
+    margin-bottom: 24px;
+    padding: 0 15px;
+  }
+  .tools__container .tools__content .card ul {
+    border: 1px solid #e5eefd;
+    border-radius: 8px;
+  }
+  .tools__container .tools__content .card ul li a {
+    padding: 14px 10px;
+  }
+  .tools__container .tools__content .card ul li a img {
+    margin: 0;
+  }
+  .plan__container .plan__content ol {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .plan__container .plan__content ol li .card__content {
+    gap: 8px;
+  }
+  .plan__container .plan__content .banner {
+    gap: 32px;
+  }
+  .plan__container .plan__content .banner__content .banner__wrap {
+    gap: 20px;
+  }
+  .plan__container .plan__content .banner__actions {
+    max-width: 340px;
+    gap: 28px;
+    align-items: start;
+  }
+  .questions {
+    padding: 72px 0;
+    margin-bottom: 32px;
+  }
+  .questions__container {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .questions__container .questions__tabs {
+    margin-bottom: 8px;
+  }
+  .questions__container .questions__content .tab-block {
+    gap: 8px;
+  }
+  .questions__container .questions__content .tab-block__wrap-left .tab-block__content {
+    padding: 30px 10px 30px 30px;
+  }
+  .questions__container .questions__content .tab-block__wrap-bottom {
+    gap: 8px;
+  }
+  .questions__container .questions__content .tab-block__wrap-bottom .card {
+    padding: 30px 20px 30px 30px;
+  }
+  .questions__container .questions__content .tab-block__wrap-right img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+  .team {
+    padding: 72px 0;
+    margin-bottom: 32px;
+  }
+  .team__container .team__header {
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .team__container .team__header .subtitle {
+    max-width: 560px;
+  }
+  .team__container .team__content {
+    grid-template-columns: 1fr 386px;
+    gap: 8px;
+  }
+  .team__container .team__content .team__card {
+    height: 542px;
+    padding: 30px 16px 16px 16px;
+  }
+  .team__container .team__content .team__card-left {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .team__container .team__content .team__card-left .profile {
+    grid-template-columns: 420px 1fr;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-left {
+    padding: 0 30px;
+    margin: 30px 0;
+    border-right: 1px solid rgba(152, 183, 255, 0.24);
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-left .profile__main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__img {
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    bottom: 0px;
+    left: -175px;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: unset;
+    height: unset;
+  }
+  .team__container .team__content .team__card-right h4 {
+    color: #f5f5f5;
+    margin-bottom: 8px;
+  }
+  .team__container .team__content .team__card-right .card__wrap {
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+  .team__container .team__content .team__card-right .card__wrap .swiper-buttons {
+    gap: 8px;
+  }
+  .team__container .team__content .team__card-right .card__swiper {
+    padding: 30px 12px 16px 12px;
+    height: 380px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper {
+    gap: 24px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile .img-container {
+    position: relative;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile .img-container img {
+    width: 86px;
+    height: 86px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile p {
+    font-size: 10px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile span {
+    font-size: 8px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-pagination {
+    gap: 5px;
+    padding: 6px 12px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
+  .practical__container .practical__header h2 {
+    max-width: 560px;
+    text-align: start;
+  }
+  .practical__container .practical__header p {
+    max-width: 380px;
+    text-align: start;
+  }
+  .practical__container .practical__cards ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .practical__container .practical__cards ul li .card__content {
+    padding: 30px;
+  }
+  .practical__container .practical__cards ul li .card__content .worker .worker__stack {
+    display: flex;
+    gap: 2px;
+  }
+  .practical__container .practical__cards ul li .card__content .worker .worker__stack span {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .practical__container .banner__content {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .practical__container .banner__content h3 {
+    max-width: unset;
+  }
+  .practical__container .banner__actions {
+    max-width: 290px;
+    margin-left: unset;
+  }
+  .FAQ {
+    padding: 72px 0;
+    margin-bottom: 32px;
+    background-image: url("../../assets/img/FAQ_bg_1.png"), url("../../assets/img/FAQ_bg_2.png"), url("../../assets/img/FAQ_bg_3.png");
+    background-repeat: no-repeat;
+    background-position: left top 410px, left top 400px, right top 260px;
+  }
+  .FAQ__container {
+    max-width: 980px;
+  }
+  .FAQ__container .FAQ__content {
+    position: relative;
+    transition: height 0.3s ease-in-out;
+  }
+  .FAQ__container .FAQ__content .tab-block {
+    grid-template-columns: 350px 1fr;
+    gap: 42px;
+  }
+  .video {
+    padding: 72px 0;
+    margin-bottom: 16px;
+  }
+  .video__container {
+    max-width: 980px;
+  }
+  .video__container .video__content {
+    gap: 32px;
+  }
+  .video__container .video__content .video__wrap {
+    height: 575px;
+  }
+  .video__container .video__content .video__wrap video {
+    width: 100%;
+    height: 100%;
+  }
+  .video__container .video__content .video__wrap .video-preview {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .video__container .video__content .video__wrap .video-info {
+    width: 240px;
+  }
+  .final {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 1200px) {
+  .hero {
+    padding: 100px 0;
+  }
+  .hero__container h1 {
+    max-width: 500px;
+  }
+  .hero__container h1 .line {
+    display: inline;
+  }
+  .hero__container h1 .line span {
+    display: inline;
+  }
+  .hero__container .subtitle {
+    max-width: 455px;
+  }
+  .hero__container .hero__info {
+    padding: 12px;
+  }
+  .hero__container .hero__info .text {
+    font-size: 12px;
+  }
+  .hero__container .hero__info-1 {
+    right: 10px;
+    top: 0px;
+  }
+  .hero__container .hero__info-2 {
+    right: 370px;
+    top: unset;
+    bottom: -45px;
+  }
+  .hero__container .hero__decor {
+    position: absolute;
+    right: 0px;
+    width: 485px;
+    height: 485px;
+    background-size: contain;
+  }
+  .tools__container .tools__content {
+    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tools__container .tools__content .card {
+    padding: 30px;
+  }
+  .tools__container .tools__content .card__header {
+    gap: 16px;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+  .tools__container .tools__content .card__header h5 {
+    margin-left: 0;
+  }
+  .tools__container .tools__content .card p {
+    margin-bottom: 24px;
+    padding: 0;
+  }
+  .tools__container .tools__content .card ul {
+    border: 1px solid #e5eefd;
+    border-radius: 8px;
+  }
+  .tools__container .tools__content .card ul li a {
+    padding: 14px 20px;
+  }
+  .tools__container .tools__content .card ul li a img {
+    margin: 0;
+  }
+  .plan__container .plan__content ol {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .plan__container .plan__content ol li .card {
+    padding: 30px;
+  }
+  .plan__container .plan__content ol li .card__content {
+    gap: 8px;
+  }
+  .plan__container .plan__content ol li .card__content p br {
+    display: none;
+  }
+  .plan__container .plan__content .banner {
+    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-position: right bottom;
+  }
+  .plan__container .plan__content .banner__content {
+    display: contents;
+  }
+  .plan__container .plan__content .banner__content h3 {
+    max-width: 320px;
+  }
+  .plan__container .plan__content .banner__content .banner__wrap {
+    grid-area: 1/2/3/3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .plan__container .plan__content .banner__content .banner__wrap .banner__plus {
+    width: 245px;
+  }
+  .plan__container .plan__content .banner__actions {
+    max-width: 320px;
+    gap: 24px;
+    align-items: start;
+  }
+  .plan__container .plan__content .banner__actions p {
+    font-size: 14px;
+  }
+  .questions__container .questions__tabs {
+    margin-bottom: 8px;
+  }
+  .questions__container .questions__content .tab-block {
+    gap: 16px;
+  }
+  .questions__container .questions__content .tab-block__wrap-left .tab-block__content {
+    padding: 30px 10px 30px 30px;
+  }
+  .questions__container .questions__content .tab-block__wrap-bottom {
+    gap: 16px;
+  }
+  .questions__container .questions__content .tab-block__wrap-bottom .card {
+    padding: 30px;
+  }
+  .questions__container .questions__content .tab-block__wrap-right img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+  }
+  .team__container .team__content {
+    grid-template-columns: 1fr 350px;
+    gap: 16px;
+  }
+  .team__container .team__content .team__card {
+    height: 552px;
+    padding: 30px;
+  }
+  .team__container .team__content .team__card-left {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .team__container .team__content .team__card-left .profile {
+    grid-template-columns: 380px 1fr;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-left {
+    padding: 0 30px;
+    margin: 30px 0;
+    border-right: 1px solid rgba(152, 183, 255, 0.24);
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-left .profile__main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-left .primary-button {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-left .primary-button .icon {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__img {
+    position: absolute;
+    top: 80px;
+    right: unset;
+    bottom: 0px;
+    left: -165px;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    min-width: 531px;
+    height: 481px;
+  }
+  .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__timeline {
+    display: none;
+  }
+  .team__container .team__content .team__card-right h4 {
+    font-size: 24px;
+  }
+  .team__container .team__content .team__card-right .card__wrap {
+    gap: 16px;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+  .team__container .team__content .team__card-right .card__wrap .swiper-buttons {
+    gap: 8px;
+  }
+  .team__container .team__content .team__card-right .card__swiper {
+    padding: 24px 12px 16px 12px;
+    height: 340px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper {
+    gap: 18px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile .img-container {
+    position: relative;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile .img-container img {
+    width: 86px;
+    height: 86px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile p {
+    font-size: 10px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile span {
+    font-size: 8px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-pagination {
+    gap: 5px;
+    padding: 6px 12px;
+  }
+  .team__container .team__content .team__card-right .card__swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+  }
+  .social__container .scheme__info {
+    bottom: 30px;
+  }
+  .social__container .banner {
+    background-position: right bottom;
+    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+  }
+  .practical__container .practical__header h2 {
+    max-width: 350px;
+    text-align: start;
+  }
+  .practical__container .practical__header p {
+    max-width: 380px;
+    text-align: start;
+  }
+  .practical__container .practical__cards ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .practical__container .practical__cards ul li .card {
+    height: 100%;
+  }
+  .practical__container .practical__cards ul li .card__content {
+    padding: 30px 24px;
+  }
+  .practical__container .practical__cards ul li .card__content .worker .worker__stack {
+    display: flex;
+    gap: 2px;
+  }
+  .practical__container .practical__cards ul li .card__content .worker .worker__stack span {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .practical__container .practical__info ul li {
+    gap: 20px;
+  }
+  .practical__container .practical__info ul li p {
+    font-size: 56px;
+  }
+  .practical__container .banner__content {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .practical__container .banner__content h3 {
+    max-width: unset;
+  }
+  .practical__container .banner__actions {
+    max-width: 290px;
+    margin-left: unset;
+  }
+  .FAQ {
+    background-position: left top 100px, left -150px top 250px, right top 260px;
+  }
+  .FAQ__container {
+    max-width: 720px;
+  }
+  .FAQ__container .FAQ__tabs {
+    width: unset;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .FAQ__container .FAQ__content {
+    position: relative;
+    transition: height 0.3s ease-in-out;
+  }
+  .FAQ__container .FAQ__content .tab-block {
+    display: block;
+  }
+  .FAQ__container .FAQ__content .tab-block__wrap-left {
+    display: none;
+  }
+  .video {
+    padding: 72px 0;
+    margin-bottom: 16px;
+  }
+  .video__container {
+    max-width: 980px;
+  }
+  .video__container .video__header h2 {
+    max-width: 540px;
+  }
+  .video__container .video__header .subtitle {
+    max-width: 650px;
+  }
+  .video__container .video__content {
+    gap: 32px;
+  }
+  .video__container .video__content .video__wrap {
+    height: 575px;
+  }
+  .video__container .video__content .video__wrap video {
+    width: 100%;
+    height: 100%;
+  }
+  .video__container .video__content .video__wrap .video-preview {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .video__container .video__content .video__wrap .video-info {
+    width: 240px;
+  }
+  .final {
+    padding: 80px 0;
+  }
+  .final__container h2 {
+    max-width: 520px;
+  }
+  .final__container .final__decor {
+    right: -80px;
   }
 }/*# sourceMappingURL=style-index.css.map */
