@@ -1,0 +1,116 @@
+:root {
+  --fz-h1: 50px;
+  --fz-h2: 40px;
+  --fz-h3: 32px;
+  --fz-h4: 24px;
+  --fz-h5: 18px;
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --fz-h1: 46px;
+    --fz-h2: 36px;
+    --fz-h3: 28px;
+    --fz-h4: 20px;
+    --fz-h5: 18px;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --fz-h1: 36px;
+    --fz-h2: 28px;
+    --fz-h3: 28px;
+    --fz-h4: 18px;
+    --fz-h5: 16px;
+  }
+}
+@media (max-width: 720px) {
+  :root {
+    --fz-h1: 26px;
+    --fz-h2: 22px;
+    --fz-h3: 22px;
+    --fz-h4: 18px;
+    --fz-h5: 16px;
+  }
+}
+body {
+  background-image: url("../../assets/img/body_bg_bottom.png");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 1610px;
+}
+
+h1 {
+  font-size: var(--fz-h2);
+  text-align: center;
+}
+
+.policy {
+  padding-bottom: 72px;
+  margin-bottom: 32px;
+}
+.policy__container .policy__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.policy__container .policy__content ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 32px;
+  list-style: none;
+}
+.policy__container .policy__content ol li .accordion {
+  border: 1px solid #e5eefd;
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 26px 24px;
+  transition: background-color 0.3s ease-in-out;
+}
+.policy__container .policy__content ol li .accordion__button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1e2e47;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.policy__container .policy__content ol li .accordion__button svg {
+  min-width: 33px;
+  transition: transform 0.3s ease-in-out;
+}
+.policy__container .policy__content ol li .accordion__button svg circle {
+  transition: fill 0.3s ease-in-out;
+}
+.policy__container .policy__content ol li .accordion__button:hover svg circle {
+  fill: #1560bd;
+}
+.policy__container .policy__content ol li .accordion__button--active svg {
+  transform: rotate(180deg);
+}
+.policy__container .policy__content ol li .accordion__content {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
+}
+.policy__container .policy__content ol li .accordion__content p {
+  width: calc(100% - 50px);
+  color: rgba(19, 50, 122, 0.5);
+  font-size: 16px;
+  font-style: normal;
+  line-height: 125%;
+}
+
+.header__container .header__nav .list .list__item a {
+  color: #1e2e47;
+}
+.header__container .header__nav .list .list__item a::after {
+  background-color: #1e2e47;
+}/*# sourceMappingURL=style-policy.css.map */

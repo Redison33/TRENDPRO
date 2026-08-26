@@ -98,16 +98,36 @@ h5 {
 
 .tab {
   @include tab;
+
+  &--active {
+    border: 1px solid #1560bd;
+    background: #f4f6ff;
+    color: #1560bd;
+
+    svg {
+      linearGradient {
+        display: block;
+      }
+    }
+  }
 }
 
-.tab--active {
-  border: 1px solid #1560bd;
-  background: #f4f6ff;
-  color: #1560bd;
+.section-header-anim {
+  h2,
+  h1,
+  .subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-  svg {
-    linearGradient {
-      display: block;
+  .is-visible & {
+    h2,
+    h1 {
+      animation: section-header-fade-up 600ms ease-out 0.1s forwards;
+    }
+
+    .subtitle {
+      animation: section-header-fade-up 500ms ease-out 0.25s forwards;
     }
   }
 }
@@ -398,6 +418,46 @@ h5 {
   }
 }
 
+.breadcrumbs {
+  margin-top: 60px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  nav {
+    ol {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        a,
+        p {
+          color: #1e2e47;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: $weight-semibold;
+          line-height: 120%;
+          transition: color 0.3s ease-in-out;
+        }
+
+        a {
+          color: rgba(19, 50, 122, 0.5);
+
+          &:hover {
+            color: #1e2e47;
+          }
+        }
+      }
+    }
+  }
+}
+
 .footer {
   &__container {
     .footer__wrap {
@@ -586,6 +646,35 @@ h5 {
           }
         }
       }
+    }
+  }
+}
+
+.final {
+  padding: 88px 0;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    h2 {
+      max-width: 620px;
+      text-align: start;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      max-width: 430px;
+      text-align: start;
+      color: #98b7ff;
+      margin-bottom: 40px;
+    }
+
+    .final__decor {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

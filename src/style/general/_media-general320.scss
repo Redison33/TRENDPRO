@@ -188,6 +188,37 @@
     }
   }
 
+  .final {
+    padding: 55px 0;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        text-align: center;
+        order: 2;
+        max-width: unset;
+      }
+
+      .subtitle {
+        text-align: center;
+        order: 3;
+        margin-bottom: 32px;
+      }
+
+      .primary-button {
+        order: 4;
+      }
+
+      .final__decor {
+        order: 1;
+        position: static;
+      }
+    }
+  }
+
   @keyframes hero-cube {
     0% {
       opacity: 0;

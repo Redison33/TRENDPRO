@@ -145,4 +145,21 @@
       }
     }
   }
+
+  .final {
+    padding: 80px 0;
+
+    &__container {
+      h2 {
+        max-width: 520px;
+      }
+
+      .subtitle {
+      }
+
+      .final__decor {
+        right: -80px;
+      }
+    }
+  }
 }
