@@ -1,0 +1,54 @@
+@media (max-width: 720px) {
+  body {
+    background-size: 100% 3000px;
+  }
+
+  .policy {
+    padding-bottom: 72px;
+    margin-bottom: 32px;
+
+    &__container {
+      .policy__header {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // gap: 24px;
+        // margin-bottom: 48px;
+      }
+
+      .policy__content {
+        ol {
+          // display: flex;
+          // flex-direction: column;
+          // gap: 10px;
+          // margin-bottom: 32px;
+          // list-style: none;
+
+          li {
+            .accordion {
+              padding: 24px;
+
+              &__button {
+                text-align: start;
+              }
+
+              &__content {
+                p {
+                  width: 100%;
+                  color: rgba(19, 50, 122, 0.5);
+                  font-size: 14px;
+                  font-style: normal;
+                  line-height: 125%;
+                }
+              }
+
+              &--active {
+                background-color: #f4f6ff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

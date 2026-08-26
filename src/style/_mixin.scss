@@ -10,22 +10,22 @@
 
   @media (max-width: 1400px) {
     max-width: 1176px;
-    margin: 0 auto;
+    margin: 0 auto !important;
     // margin: 0 32px;
   }
 
   @media (max-width: 1200px) {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 
   @media (max-width: 1000px) {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 
   @media (max-width: 720px) {
-    margin: 0 15px;
+    margin: 0 15px !important;
   }
 }
 
@@ -62,13 +62,14 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: #fff;
+      background: #1560bd;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.3s ease-in-out;
     }
 
     svg {
+      margin-left: -2px;
       position: relative;
       z-index: 1;
       path {
@@ -78,19 +79,20 @@
   }
 
   &:hover {
-    background-color: #0f49ad;
-    color: #fff;
+    // background-color: #0f49ad;
+    // color: #fff;
+    box-shadow: 7px 4px 26.9px 0px #9fcaff;
 
     .icon {
       &::before {
         opacity: 1;
       }
 
-      svg {
-        path {
-          fill: #0f49ad;
-        }
-      }
+      // svg {
+      //   path {
+      //     fill: #0f49ad;
+      //   }
+      // }
     }
   }
 }
@@ -131,6 +133,8 @@
   }
 
   &:hover {
+    box-shadow: 7px 4px 15.9px 0px #9fcaff2b;
+
     background-color: #1560bd;
 
     &::before {

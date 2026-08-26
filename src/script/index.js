@@ -1,4 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.hero')) {
+    const hero = document.querySelector('.hero');
+    const numbers = hero.querySelectorAll('.hero__info .number');
+
+    const animateNumber = (number) => {
+      const valueElement = number.querySelector('.number__value');
+      const target = Number(number.dataset.count);
+
+      if (!valueElement || !target) return;
+
+      const duration = 3000;
+      const startTime = performance.now();
+
+      const update = (currentTime) => {
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+        valueElement.textContent = Math.floor(target * easedProgress);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          valueElement.textContent = target;
+        }
+      };
+
+      requestAnimationFrame(update);
+    };
+
+    numbers.forEach((number) => {
+      animateNumber(number);
+    });
+  }
+
   if (document.querySelector('.tools')) {
     const tools = document.querySelector('.tools');
     const decorLarge = tools.querySelector('.tools__decor-2');
@@ -113,6 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tab.classList.add('tab--active');
         contents.querySelectorAll('.tab-block')[index].classList.add('tab-block--active');
+
+        contents
+          .querySelectorAll('.tab-block')
+          [index].querySelectorAll('*')
+          .forEach((el) => {
+            el.style.animation = 'none';
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          });
       });
     }
   }
@@ -179,7 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    const baseHeight = contents.querySelector('.tab-block').scrollHeight;
+    const minHeight = contents.querySelector('.tab-block').scrollHeight;
+
+    let baseHeight = contents.querySelector('.tab-block').scrollHeight;
 
     contents.style.height = `${baseHeight}px`;
 
@@ -218,7 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
 
-          contents.style.height = baseHeight + 'px';
+          contents.style.height = minHeight + 'px';
+          baseHeight = minHeight + 'px';
 
           button.classList.remove('button-more--active');
           button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
@@ -231,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
 
           contents.style.height = `${tabBlock.scrollHeight}px`;
+          baseHeight = tabBlock.scrollHeight;
         }
       });
     });
@@ -276,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
           accordion.classList.add('accordion--active');
           button.classList.add('accordion__button--active');
           content.style.paddingTop = '5px';
-          content.style.height = `${content.scrollHeight}px`;
+          content.style.height = `${content.scrollHeight + 5}px`;
 
           contents.style.height = `${baseHeight + content.scrollHeight}px`;
         } else {

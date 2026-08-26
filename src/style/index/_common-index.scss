@@ -88,15 +88,16 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        font-size: var(--fz-h2);
         font-weight: $weight-medium;
         font-family: $font-titles;
+        font-size: 20px;
         color: #ffffff;
         line-height: 100%;
 
-        span {
+        &__value {
+          font-size: var(--fz-h2);
+          font-weight: $weight-medium;
           font-family: $font-titles;
-          font-size: 20px;
         }
       }
 
@@ -213,13 +214,11 @@
 
             svg {
               rect {
-                transition:
-                  fill 0.3s ease-in-out,
-                  stroke 0.3s ease-in-out;
+                transition: fill 0.4s ease-in-out;
               }
 
               path {
-                transition: fill 0.3s ease-in-out;
+                transition: fill 0.4s ease-in-out;
               }
             }
 
@@ -227,7 +226,7 @@
               svg {
                 rect {
                   fill: #1560bd;
-                  stroke: #1560bd;
+                  // stroke: #1560bd;
                 }
 
                 path {
@@ -399,6 +398,7 @@
             flex-direction: column;
             height: 396px;
             position: relative;
+            border: 1px solid #e5eefd;
 
             opacity: 0;
             transform: translateY(25px);
@@ -445,6 +445,7 @@
                 color: rgba(19, 50, 122, 0.5);
                 font-size: $fz-body;
                 line-height: 125%;
+                max-width: 350px;
               }
             }
 
@@ -504,6 +505,7 @@
           transform 600ms ease-out;
 
         &__content {
+          width: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -530,6 +532,7 @@
               color: #f5f5f5;
               font-size: $fz-body;
               line-height: 125%;
+              max-width: 240px;
 
               opacity: 0;
               transform: translateX(-5px);
@@ -757,6 +760,7 @@
 
   &__container {
     max-width: 1130px;
+    margin: 0 auto;
 
     .questions__header {
       display: flex;
@@ -1011,6 +1015,7 @@
 
       .subtitle {
         color: #f5f5f5;
+        max-width: 550px;
       }
     }
 
@@ -1318,7 +1323,7 @@
             border-radius: 8px;
             border: 1px solid #eeeded20;
             background: rgba(255, 255, 255, 0.06);
-            padding: 35px 35px 16px 35px;
+            padding: 35px 12px 16px 12px;
             height: 380px;
 
             .swiper {
@@ -1339,6 +1344,7 @@
                     flex-direction: column;
                     align-items: center;
                     position: relative;
+                    cursor: pointer;
 
                     .img-container {
                       position: relative;
@@ -1351,6 +1357,8 @@
                         object-position: top center;
                         margin-bottom: 8px;
                         box-sizing: border-box;
+                        outline: 6px solid rgba(255, 255, 255, 0);
+                        border: 3px solid rgba(255, 255, 255, 0);
 
                         transition:
                           outline 0.3s ease-in-out,
@@ -1587,6 +1595,7 @@
         transform 550ms ease-out;
 
       &__wrap {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1606,6 +1615,7 @@
         }
 
         p {
+          max-width: 430px;
           font-size: $fz-body-sm;
           font-weight: $weight-regular;
           color: #ffffffbf;
@@ -2079,6 +2089,7 @@
 
   &__container {
     max-width: 1130px;
+    margin: 0 auto;
 
     .FAQ__header {
       display: flex;
@@ -2112,7 +2123,6 @@
         gap: 16px;
         opacity: 0;
         transform: scale(0);
-        transform: translateX(-100%);
         transition:
           opacity 0.3s ease-in-out,
           transform 0.3s ease-in-out;
@@ -2258,6 +2268,7 @@
 
   &__container {
     max-width: 1130px;
+    margin: 0 auto;
 
     .video__header {
       display: flex;
@@ -2265,6 +2276,10 @@
       align-items: center;
       gap: 24px;
       margin-bottom: 48px;
+
+      h2 {
+        max-width: 1000px;
+      }
     }
 
     .video__content {

@@ -127,7 +127,11 @@
           grid-template-columns: repeat(1, 1fr);
 
           li {
+            display: flex;
+            justify-content: center;
+
             .card {
+              max-width: 330px;
               background-image: url('../../assets/img/plan_card_bg.png');
               background-position: top center;
               background-size: cover;
@@ -156,7 +160,7 @@
             &:nth-child(1) {
               .card {
                 img {
-                  top: 87px !important;
+                  top: 76px !important;
                 }
               }
             }
@@ -164,7 +168,7 @@
             &:nth-child(2) {
               .card {
                 img {
-                  top: 128px !important;
+                  top: 117px !important;
                 }
               }
             }
@@ -172,7 +176,7 @@
             &:nth-child(3) {
               .card {
                 img {
-                  top: 76px !important;
+                  top: 65px !important;
                 }
               }
             }

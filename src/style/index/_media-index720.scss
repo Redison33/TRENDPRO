@@ -25,9 +25,9 @@
         }
 
         .number {
-          font-size: 24px;
-          span {
-            font-size: 12px;
+          font-size: 12px;
+          &__value {
+            font-size: 24px;
           }
         }
 
