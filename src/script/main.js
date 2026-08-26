@@ -72,6 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  for (const openPopup of document.querySelectorAll('.open-popup')) {
+    openPopup.addEventListener('click', () => {
+      document.querySelector('.popup').style.display = 'flex';
+    });
+  }
+
+  if (document.querySelector('.popup')) {
+    document.querySelector('.popup .popup__close').addEventListener('click', () => {
+      document.querySelector('.popup').removeAttribute('style');
+    });
+  }
+
   const sections = document.querySelectorAll(
     '.tools, .questions, .team, .plan, .social, .practical',
     'policy',

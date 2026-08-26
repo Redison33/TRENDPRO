@@ -78,6 +78,34 @@
     }
   }
 
+  .popup {
+    &__container {
+      width: 700px;
+      border-radius: 24px;
+      padding: 24px;
+      gap: 24px;
+
+      img {
+        width: 320px;
+      }
+
+      .popup__content {
+        gap: 16px;
+        padding: 16px 0;
+        padding-right: 26px;
+
+        h3 {
+        }
+
+        p {
+        }
+      }
+
+      .popup__close {
+      }
+    }
+  }
+
   .footer {
     &__container {
       .footer__wrap {

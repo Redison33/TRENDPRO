@@ -459,7 +459,7 @@ h5 {
 }
 
 .cookie {
-  z-index: 10000;
+  z-index: 100;
   position: fixed;
   right: 32px;
   bottom: 32px;
@@ -531,6 +531,78 @@ h5 {
           color: #fff;
           background: linear-gradient(136deg, #4c9cff -59.81%, #1560bd 164.51%);
           border-color: linear-gradient(136deg, #4c9cff -59.81%, #1560bd 164.51%);
+        }
+      }
+    }
+  }
+}
+
+.popup {
+  display: none;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(8px);
+
+  &__container {
+    position: relative;
+    width: 900px;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    gap: 32px;
+
+    img {
+      width: 420px;
+    }
+
+    .popup__content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 24px;
+      padding: 32px 0;
+      padding-right: 26px;
+
+      h3 {
+        color: #36383a;
+        font-weight: $weight-regular;
+        line-height: 100%;
+        margin-bottom: auto;
+      }
+
+      p {
+        color: rgba(54, 56, 58, 0.6);
+        font-size: $fz-body;
+        font-style: normal;
+        font-weight: $weight-medium;
+        line-height: 125%;
+      }
+    }
+
+    .popup__close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+
+      svg {
+        circle {
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+
+      &:hover {
+        svg {
+          circle {
+            fill: #e0e2eb;
+          }
         }
       }
     }

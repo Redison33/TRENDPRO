@@ -638,7 +638,7 @@ h5 {
 }
 
 .cookie {
-  z-index: 10000;
+  z-index: 100;
   position: fixed;
   right: 32px;
   bottom: 32px;
@@ -703,6 +703,64 @@ h5 {
   color: #fff;
   background: linear-gradient(136deg, #4c9cff -59.81%, #1560bd 164.51%);
   border-color: linear-gradient(136deg, #4c9cff -59.81%, #1560bd 164.51%);
+}
+
+.popup {
+  display: none;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(8px);
+}
+.popup__container {
+  position: relative;
+  width: 900px;
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  gap: 32px;
+}
+.popup__container img {
+  width: 420px;
+}
+.popup__container .popup__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+  padding: 32px 0;
+  padding-right: 26px;
+}
+.popup__container .popup__content h3 {
+  color: #36383a;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: auto;
+}
+.popup__container .popup__content p {
+  color: rgba(54, 56, 58, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+}
+.popup__container .popup__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.popup__container .popup__close svg circle {
+  transition: fill 0.3s ease-in-out;
+}
+.popup__container .popup__close:hover svg circle {
+  fill: #e0e2eb;
 }
 
 .footer__container .footer__wrap {
@@ -1155,6 +1213,20 @@ h5 {
     width: 100%;
     text-align: center;
   }
+  .popup__container {
+    width: 700px;
+    border-radius: 24px;
+    padding: 24px;
+    gap: 24px;
+  }
+  .popup__container img {
+    width: 320px;
+  }
+  .popup__container .popup__content {
+    gap: 16px;
+    padding: 16px 0;
+    padding-right: 26px;
+  }
   .footer__container .footer__wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1280,6 +1352,33 @@ h5 {
   .cookie__container .cookie__actions button {
     width: 100%;
     font-size: 13px;
+  }
+  .popup {
+    align-items: end;
+  }
+  .popup__container {
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    padding: 32px;
+    gap: 48px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .popup__container img {
+    width: 272px;
+  }
+  .popup__container .popup__content {
+    gap: 16px;
+    padding: 0;
+    padding-right: 0;
+  }
+  .popup__container .popup__content p {
+    margin-bottom: 16px;
+  }
+  .popup__container .popup__close {
+    position: fixed;
+    top: 24px;
+    right: 24px;
   }
   .footer__container .footer__wrap {
     display: flex;
