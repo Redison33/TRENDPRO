@@ -938,9 +938,10 @@
 .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__timeline ul::before {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 15px;
-  bottom: 15px;
+  left: 5px;
+  transform: translateX(-50%);
+  top: 22px;
+  bottom: 22px;
   width: 1px;
   background-color: #98b7ff;
 }
@@ -950,9 +951,9 @@
   align-items: center;
 }
 .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__timeline ul li span {
-  width: 9px;
-  min-width: 9px;
-  height: 9px;
+  width: 10px;
+  min-width: 10px;
+  height: 10px;
   background-color: #98b7ff;
   border-radius: 50%;
 }
