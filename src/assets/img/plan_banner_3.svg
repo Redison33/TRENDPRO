@@ -1,0 +1,15 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="40" height="40" rx="10" fill="url(#paint0_radial_638_5438)"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="url(#paint1_linear_638_5438)" stroke-opacity="0.4"/>
+<path d="M19.9974 11.666C24.5974 11.666 28.3307 15.3993 28.3307 19.9993C28.3307 24.5993 24.5974 28.3327 19.9974 28.3327C15.3974 28.3327 11.6641 24.5993 11.6641 19.9993C11.6641 15.3993 15.3974 11.666 19.9974 11.666ZM19.9974 26.666C23.6863 26.666 26.6641 23.6883 26.6641 19.9993C26.6641 16.3105 23.6863 13.3327 19.9974 13.3327C16.3085 13.3327 13.3307 16.3105 13.3307 19.9993C13.3307 23.6883 16.3085 26.666 19.9974 26.666ZM19.9974 24.9993C17.2307 24.9993 14.9974 22.766 14.9974 19.9993C14.9974 17.2327 17.2307 14.9993 19.9974 14.9993C22.7641 14.9993 24.9974 17.2327 24.9974 19.9993C24.9974 22.766 22.7641 24.9993 19.9974 24.9993ZM19.9974 18.3327C19.0807 18.3327 18.3307 19.0827 18.3307 19.9993C18.3307 20.916 19.0807 21.666 19.9974 21.666C20.9141 21.666 21.6641 20.916 21.6641 19.9993C21.6641 19.0827 20.9141 18.3327 19.9974 18.3327Z" fill="white"/>
+<defs>
+<radialGradient id="paint0_radial_638_5438" cx="0" cy="0" r="1" gradientTransform="matrix(40 40 -40 15.5871 0 0)" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear_638_5438" x1="0" y1="0" x2="8.52781" y2="44.5025" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EEEDED" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>

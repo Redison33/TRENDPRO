@@ -96,7 +96,7 @@
 
         &__value {
           font-size: var(--fz-h2);
-          font-weight: $weight-medium;
+          font-weight: $weight-semibold;
           font-family: $font-titles;
         }
       }
@@ -416,7 +416,7 @@
               align-items: center;
               background: #fff;
               font-family: $font-titles;
-              font-weight: $weight-medium;
+              font-weight: $weight-semibold;
               font-size: 12px;
               line-height: 100%;
               color: #488eff;
@@ -919,13 +919,13 @@
                   background: linear-gradient(135.95deg, #4c9cff -59.81%, #1560bd 164.51%);
                   color: #fff;
                   font-family: $font-titles;
-                  font-weight: $weight-medium;
+                  font-weight: $weight-semibold;
                   font-size: 12px;
                   line-height: 100%;
                 }
 
                 h5 {
-                  font-weight: $weight-medium;
+                  font-weight: $weight-semibold;
                   line-height: 100%;
                 }
               }
@@ -1948,7 +1948,7 @@
           p {
             color: #1560bd;
             font-family: $font-titles;
-            font-weight: $weight-medium;
+            font-weight: $weight-semibold;
             font-size: 72px;
             line-height: 100%;
             letter-spacing: 0%;

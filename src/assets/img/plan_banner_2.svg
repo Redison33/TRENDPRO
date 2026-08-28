@@ -1,0 +1,15 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="40" height="40" rx="10" fill="url(#paint0_radial_638_5433)"/>
+<rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="url(#paint1_linear_638_5433)" stroke-opacity="0.4"/>
+<path d="M20.8359 21.7189V28.334H13.3359C13.3359 24.6521 16.3207 21.6673 20.0026 21.6673C20.2849 21.6673 20.5629 21.6848 20.8359 21.7189ZM20.0026 20.834C17.2401 20.834 15.0026 18.5965 15.0026 15.834C15.0026 13.0715 17.2401 10.834 20.0026 10.834C22.7651 10.834 25.0026 13.0715 25.0026 15.834C25.0026 18.5965 22.7651 20.834 20.0026 20.834ZM24.83 26.5958L27.7763 23.6496L28.9548 24.8281L24.83 28.9528L21.8838 26.0066L23.0623 24.8281L24.83 26.5958Z" fill="white"/>
+<defs>
+<radialGradient id="paint0_radial_638_5433" cx="0" cy="0" r="1" gradientTransform="matrix(40 40 -40 15.5871 0 0)" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.4"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear_638_5433" x1="0" y1="0" x2="8.52781" y2="44.5025" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#EEEDED" stop-opacity="0.5"/>
+</linearGradient>
+</defs>
+</svg>

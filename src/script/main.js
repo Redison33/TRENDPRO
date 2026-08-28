@@ -84,6 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (document.querySelector('.cookie')) {
+    for (const cookieClose of document.querySelectorAll('.cookie-close')) {
+      cookieClose.addEventListener('click', () => {
+        document.querySelector('.cookie').remove();
+      });
+    }
+  }
+
   const sections = document.querySelectorAll(
     '.tools, .questions, .team, .plan, .social, .practical',
     'policy',

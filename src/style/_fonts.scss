@@ -21,9 +21,9 @@
 @font-face {
   font-family: 'Onest';
   src:
-    local('Onest-Semibold'),
-    local('Onest Semibold'),
-    url('../../assets/fonts/Onest-Semibold.woff2') format('woff2');
+    local('Onest-SemiBold'),
+    local('Onest SemiBold'),
+    url('../../assets/fonts/Onest-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
@@ -45,6 +45,16 @@
     local('Unbounded-Medium'),
     url('../../assets/fonts/Unbounded-Medium.woff2') format('woff2');
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Unbounded';
+  src:
+    local('Unbounded-SemiBold'),
+    local('Unbounded-SemiBold'),
+    url('../../assets/fonts/Unbounded-SemiBold.ttf') format('woff2');
+  font-weight: 600;
   font-style: normal;
 }
 
