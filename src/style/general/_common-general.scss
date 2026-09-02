@@ -258,8 +258,8 @@ h5 {
   height: 100vh;
   background: rgba(0, 0, 0, 0.58);
   backdrop-filter: blur(8px);
-  transform: scale(1, 0);
-  transform-origin: top center;
+  transform: scale(0, 1);
+  transform-origin: center right;
   transition: transform 0.3s ease-in-out;
 
   &__container {
@@ -290,6 +290,23 @@ h5 {
         align-items: center;
         border: 1px solid #d9d9d9;
         border-radius: 50%;
+        transition: border-color 0.3s ease-in-out;
+
+        svg {
+          path {
+            transition: fill 0.3s ease-in-out;
+          }
+        }
+
+        &:hover {
+          border-color: #1e2e47;
+
+          svg {
+            path {
+              fill: #1e2e47;
+            }
+          }
+        }
       }
     }
 
@@ -347,7 +364,7 @@ h5 {
               }
 
               &--active {
-                color: #337de8;
+                // color: #337de8;
 
                 .icon {
                   background-color: #337de8;
@@ -362,7 +379,8 @@ h5 {
               }
 
               &:hover {
-                background-color: #fff;
+                color: #337de8;
+                background-color: #ffffffbf;
               }
             }
 

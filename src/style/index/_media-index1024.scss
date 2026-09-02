@@ -80,7 +80,8 @@
             border: 1px solid #e5eefd;
             border-radius: 8px;
             li {
-              a {
+              a,
+              button {
                 padding: 14px 10px;
 
                 img {
@@ -146,6 +147,7 @@
             align-items: start;
 
             p {
+              width: unset;
             }
           }
         }
@@ -729,7 +731,8 @@
             border: 1px solid #e5eefd;
             border-radius: 8px;
             li {
-              a {
+              a,
+              button {
                 padding: 14px 20px;
 
                 img {

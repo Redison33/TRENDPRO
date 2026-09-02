@@ -237,11 +237,14 @@
   border: 1px solid #e5eefd;
   border-radius: 8px;
 }
-.tools__container .tools__content .card ul li a {
+.tools__container .tools__content .card ul li a,
+.tools__container .tools__content .card ul li button {
+  width: 100%;
+  text-align: start;
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   border-radius: 7px;
   padding: 14px 18px;
   font-weight: 500;
@@ -252,27 +255,34 @@
   background-color: #fff;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.tools__container .tools__content .card ul li a img {
+.tools__container .tools__content .card ul li a img,
+.tools__container .tools__content .card ul li button img {
   margin-right: 8px;
   transition: transform 0.2s ease;
 }
-.tools__container .tools__content .card ul li a svg {
+.tools__container .tools__content .card ul li a svg,
+.tools__container .tools__content .card ul li button svg {
   margin-left: auto;
   transition: transform 0.2s ease;
 }
-.tools__container .tools__content .card ul li a svg path {
+.tools__container .tools__content .card ul li a svg path,
+.tools__container .tools__content .card ul li button svg path {
   transition: fill 0.2s ease, fill-opacity 0.2s ease;
 }
-.tools__container .tools__content .card ul li a:hover {
+.tools__container .tools__content .card ul li a:hover,
+.tools__container .tools__content .card ul li button:hover {
   background-color: #f4f6ff;
 }
-.tools__container .tools__content .card ul li a:hover img {
+.tools__container .tools__content .card ul li a:hover img,
+.tools__container .tools__content .card ul li button:hover img {
   transform: scale(1.06);
 }
-.tools__container .tools__content .card ul li a:hover svg {
+.tools__container .tools__content .card ul li a:hover svg,
+.tools__container .tools__content .card ul li button:hover svg {
   transform: translateX(4px);
 }
-.tools__container .tools__content .card ul li a:hover svg path {
+.tools__container .tools__content .card ul li a:hover svg path,
+.tools__container .tools__content .card ul li button:hover svg path {
   fill: #1560bd;
   fill-opacity: 1;
 }
@@ -475,6 +485,7 @@
   color: rgba(255, 255, 255, 0.7490196078);
   font-size: 16px;
   line-height: 125%;
+  width: 265px;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 500ms ease-out, transform 500ms ease-out;
@@ -482,19 +493,11 @@
 .plan__container .plan__content .banner__actions .primary-button {
   opacity: 0;
   transform: scale(0.97);
+  text-wrap: nowrap;
   transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
 .plan__container .plan__content .banner__actions .primary-button .icon {
   transition: transform 250ms ease;
-}
-.plan__container .plan__content .banner__actions .primary-button:hover {
-  transform: scale(1.02);
-}
-.plan__container .plan__content .banner__actions .primary-button:hover .icon {
-  transform: scale(1.05);
-}
-.plan__container .plan__content .banner__actions .primary-button:hover .icon svg {
-  transform: translate(2px, -2px);
 }
 .plan__container .plan__content .banner__actions .primary-button .icon svg {
   transition: transform 250ms ease;
@@ -736,6 +739,7 @@
   line-height: 100%;
 }
 .questions__container .questions__content .tab-block__wrap-bottom .card p {
+  font-weight: 400;
   text-align: start;
 }
 .questions__container .questions__content .tab-block__wrap-bottom .card:hover {
@@ -789,7 +793,7 @@
 }
 .team__container .team__header h2 {
   max-width: 1100px;
-  color: #f5f5f5;
+  color: #fff;
 }
 .team__container .team__header .subtitle {
   color: #f5f5f5;
@@ -924,9 +928,6 @@
   position: absolute;
   top: 60px;
   right: 24px;
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms ease, transform 300ms ease;
 }
 .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__timeline ul {
   position: relative;
@@ -944,11 +945,15 @@
   bottom: 22px;
   width: 1px;
   background-color: #98b7ff;
+  opacity: 0;
+  transition: opacity 300ms ease;
 }
 .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__timeline ul li {
   display: flex;
   gap: 7px;
   align-items: center;
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
 }
 .team__container .team__content .team__card-left .profile .profile__wrap-right .profile__timeline ul li span {
   width: 10px;
@@ -973,10 +978,21 @@
   transform: translateX(0);
   transition-delay: 120ms;
 }
-.team__container .team__content .team__card-left .profile--active .profile__timeline {
+.team__container .team__content .team__card-left .profile--active .profile__wrap-right .profile__timeline ul::before {
   opacity: 1;
-  transform: translateX(0);
-  transition-delay: 120ms;
+  transition-delay: 550ms;
+}
+.team__container .team__content .team__card-left .profile--active .profile__wrap-right .profile__timeline ul li {
+  opacity: 1;
+}
+.team__container .team__content .team__card-left .profile--active .profile__wrap-right .profile__timeline ul li:nth-child(1) {
+  transition-delay: 250ms;
+}
+.team__container .team__content .team__card-left .profile--active .profile__wrap-right .profile__timeline ul li:nth-child(2) {
+  transition-delay: 350ms;
+}
+.team__container .team__content .team__card-left .profile--active .profile__wrap-right .profile__timeline ul li:nth-child(3) {
+  transition-delay: 450ms;
 }
 .team__container .team__content .team__card-right h4 {
   color: #f5f5f5;
@@ -1104,6 +1120,10 @@
 .team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile--active .img-container::after {
   opacity: 1;
 }
+.team__container .team__content .team__card-right .card__swiper .swiper-wrapper .slide__profile:hover .img-container img {
+  border: 3px solid rgba(255, 255, 255, 0.23);
+  outline: 6px solid rgba(255, 255, 255, 0.23);
+}
 .team__container .team__content .team__card-right .card__swiper .swiper-pagination {
   position: static;
   display: flex;
@@ -1137,6 +1157,9 @@
   align-items: center;
   gap: 24px;
   margin-bottom: 48px;
+}
+.social__container .social__header h2 {
+  max-width: 720px;
 }
 .social__container .scheme {
   position: relative;
@@ -1511,6 +1534,7 @@
   gap: 32px;
 }
 .practical__container .practical__info ul li {
+  width: 230px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1547,6 +1571,7 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .practical__container .banner > img {
+  width: 287px;
   opacity: 0;
   transform: translateX(-10px) scale(0.9);
   transition: opacity 0.65s ease, transform 0.65s ease;
@@ -1634,6 +1659,9 @@
   gap: 24px;
   margin-bottom: 48px;
 }
+.FAQ__container .FAQ__header .subtitle {
+  max-width: 500px;
+}
 .FAQ__container .FAQ__tabs {
   width: 400px;
   position: relative;
@@ -1656,7 +1684,7 @@
   grid-template-columns: 440px 1fr;
   gap: 16px;
   opacity: 0;
-  transform: scale(0);
+  transform: translateX(-100%);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .FAQ__container .FAQ__content .tab-block__wrap-left {
@@ -1720,7 +1748,7 @@
   transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out;
 }
 .FAQ__container .FAQ__content .tab-block__wrap-right ol li .accordion__content p {
-  width: calc(100% - 50px);
+  width: calc(100% - 65px);
   color: rgba(19, 50, 122, 0.5);
   font-size: 16px;
   font-style: normal;
@@ -1857,7 +1885,7 @@
 .video__container .video__content .video__wrap .video-info {
   left: 30px;
   bottom: 30px;
-  width: 260px;
+  width: 255px;
   z-index: 10;
   position: absolute;
 }
@@ -1935,10 +1963,12 @@
     border: 1px solid #e5eefd;
     border-radius: 8px;
   }
-  .tools__container .tools__content .card ul li a {
+  .tools__container .tools__content .card ul li a,
+  .tools__container .tools__content .card ul li button {
     padding: 14px 10px;
   }
-  .tools__container .tools__content .card ul li a img {
+  .tools__container .tools__content .card ul li a img,
+  .tools__container .tools__content .card ul li button img {
     margin: 0;
   }
   .plan__container .plan__content ol {
@@ -1961,6 +1991,9 @@
     max-width: 340px;
     gap: 28px;
     align-items: start;
+  }
+  .plan__container .plan__content .banner__actions p {
+    width: unset;
   }
   .questions {
     padding: 72px 0;
@@ -2224,10 +2257,12 @@
     border: 1px solid #e5eefd;
     border-radius: 8px;
   }
-  .tools__container .tools__content .card ul li a {
+  .tools__container .tools__content .card ul li a,
+  .tools__container .tools__content .card ul li button {
     padding: 14px 20px;
   }
-  .tools__container .tools__content .card ul li a img {
+  .tools__container .tools__content .card ul li a img,
+  .tools__container .tools__content .card ul li button img {
     margin: 0;
   }
   .plan__container .plan__content ol {
@@ -2568,10 +2603,12 @@
     border: 1px solid #e5eefd;
     border-radius: 8px;
   }
-  .tools__container .tools__content .card ul li a {
+  .tools__container .tools__content .card ul li a,
+  .tools__container .tools__content .card ul li button {
     padding: 14px 20px;
   }
-  .tools__container .tools__content .card ul li a img {
+  .tools__container .tools__content .card ul li a img,
+  .tools__container .tools__content .card ul li button img {
     margin: 0;
   }
   .plan {

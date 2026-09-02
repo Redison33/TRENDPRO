@@ -207,7 +207,7 @@ h5 {
   color: #1e2e47;
   border-radius: 45px;
   box-shadow: 7px 4px 15.9px 0px rgba(159, 202, 255, 0.168627451);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .primary-button .icon {
   position: relative;
@@ -258,7 +258,7 @@ h5 {
   color: #1e2e47;
   border-radius: 45px;
   box-shadow: 7px 4px 15.9px 0px rgba(159, 202, 255, 0.168627451);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .secondary-button .icon {
   position: relative;
@@ -486,8 +486,8 @@ h5 {
   height: 100vh;
   background: rgba(0, 0, 0, 0.58);
   backdrop-filter: blur(8px);
-  transform: scale(1, 0);
-  transform-origin: top center;
+  transform: scale(0, 1);
+  transform-origin: center right;
   transition: transform 0.3s ease-in-out;
 }
 .burger-menu__container {
@@ -517,6 +517,16 @@ h5 {
   align-items: center;
   border: 1px solid #d9d9d9;
   border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+}
+.burger-menu__container .burger-menu__header button svg path {
+  transition: fill 0.3s ease-in-out;
+}
+.burger-menu__container .burger-menu__header button:hover {
+  border-color: #1e2e47;
+}
+.burger-menu__container .burger-menu__header button:hover svg path {
+  fill: #1e2e47;
 }
 .burger-menu__container .burger-menu__content {
   display: flex;
@@ -562,9 +572,6 @@ h5 {
 .burger-menu__container .burger-menu__content ul li .accordion__button svg path {
   transition: fill 0.3s ease-in-out;
 }
-.burger-menu__container .burger-menu__content ul li .accordion__button--active {
-  color: #337de8;
-}
 .burger-menu__container .burger-menu__content ul li .accordion__button--active .icon {
   background-color: #337de8;
 }
@@ -575,7 +582,8 @@ h5 {
   fill: #fff;
 }
 .burger-menu__container .burger-menu__content ul li .accordion__button:hover {
-  background-color: #fff;
+  color: #337de8;
+  background-color: rgba(255, 255, 255, 0.7490196078);
 }
 .burger-menu__container .burger-menu__content ul li .accordion__content {
   height: 0px;
