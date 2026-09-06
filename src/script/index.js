@@ -264,8 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
 
+          contents.style.transition = 'height 0.3s ease-in-out';
+
           contents.style.height = minHeight + 'px';
-          baseHeight = minHeight + 'px';
+          baseHeight = minHeight;
 
           button.classList.remove('button-more--active');
           button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
@@ -276,6 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
           items.forEach((item) => {
             item.style.display = 'block';
           });
+
+          contents.style.transition = 'none';
 
           contents.style.height = `${tabBlock.scrollHeight}px`;
           baseHeight = tabBlock.scrollHeight;
@@ -325,6 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
           button.classList.add('accordion__button--active');
           content.style.paddingTop = '5px';
           content.style.height = `${content.scrollHeight + 5}px`;
+
+          console.log(baseHeight);
 
           contents.style.height = `${baseHeight + content.scrollHeight}px`;
         } else {

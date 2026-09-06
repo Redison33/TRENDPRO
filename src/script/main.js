@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.header__burger')) {
     document.querySelector('.header__burger').addEventListener('click', () => {
       document.body.style.overflow = 'hidden';
-      document.querySelector('.burger-menu').style.transform = 'scale(1, 1)';
+      document.querySelector('.burger-menu').style.transform = 'translateX(0)';
+      document.querySelector('.burger-overlay').style.display = 'block';
     });
   }
 
@@ -42,7 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
       .addEventListener('click', () => {
         document.body.removeAttribute('style');
         document.querySelector('.burger-menu').removeAttribute('style');
+        document.querySelector('.burger-overlay').removeAttribute('style');
       });
+
+    document.querySelector('.burger-overlay').addEventListener('click', () => {
+      document.body.removeAttribute('style');
+      document.querySelector('.burger-menu').removeAttribute('style');
+      document.querySelector('.burger-overlay').removeAttribute('style');
+    });
 
     accordions.forEach((accordion) => {
       const button = accordion.querySelector('.accordion__button');
@@ -79,6 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (document.querySelector('.popup')) {
+    document.querySelector('.popup').addEventListener('click', (e) => {
+      if (e.target.classList.contains('popup')) {
+        document.querySelector('.popup').removeAttribute('style');
+      }
+    });
     document.querySelector('.popup .popup__close').addEventListener('click', () => {
       document.querySelector('.popup').removeAttribute('style');
     });

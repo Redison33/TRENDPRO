@@ -1,4 +1,5 @@
 .hero {
+  margin-top: 88px;
   padding: 150px 0;
   margin-bottom: 32px;
 
@@ -272,8 +273,16 @@
                 color 0.3s ease-in-out;
 
               img {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: #f4f6ff;
                 margin-right: 8px;
-                transition: transform 0.2s ease;
+                transition:
+                  transform 0.2s ease,
+                  background-color 0.3s ease-in-out;
               }
 
               svg {
@@ -292,6 +301,7 @@
                 background-color: #f4f6ff;
 
                 img {
+                  background-color: #ffffff;
                   transform: scale(1.06);
                 }
 
@@ -308,6 +318,10 @@
 
             .active {
               background: #f4f6ff;
+
+              img {
+                background-color: #ffffff;
+              }
             }
 
             &:not(:last-child) a::after {
@@ -551,19 +565,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border: 1px solid;
-                border-radius: 10px;
-                background: radial-gradient(
-                  100% 100% at 0% 0%,
-                  rgba(255, 255, 255, 0.4) 0%,
-                  rgba(255, 255, 255, 0) 100%
-                );
-
-                border-image-source: linear-gradient(
-                  169.15deg,
-                  rgba(255, 255, 255, 0.4) 0%,
-                  rgba(238, 237, 237, 0.2) 96.79%
-                );
 
                 transform: scale(0.9);
                 transition: transform 350ms ease-out;
@@ -1322,7 +1323,13 @@
 
                 &:hover {
                   border-color: #ffffff;
-                  background-color: transparent;
+                  background-color: #ffffff;
+
+                  svg {
+                    path {
+                      fill: #1560bd;
+                    }
+                  }
                 }
               }
 
@@ -1585,6 +1592,29 @@
 
       .dot {
         filter: url(#dotShadow);
+      }
+
+      .circle {
+        aspect-ratio: auto;
+        height: auto;
+      }
+
+      .circle::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+        pointer-events: none;
+      }
+
+      .circle > img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        -webkit-object-fit: cover;
+        border-radius: 50%;
       }
 
       &__info {
@@ -2278,7 +2308,7 @@
               text-decoration-style: solid;
               text-decoration-offset: 23.5%;
               text-decoration-thickness: 7%;
-              transition: color 0.3s ease-in-out;
+              transition: color 0.2s ease-in-out;
 
               svg {
                 transition: transform 0.3s ease-in-out;
