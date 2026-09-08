@@ -582,15 +582,28 @@ h5 {
         padding: 10px 16px;
         border-radius: 45px;
         border: 1px solid transparent;
+        transition:
+          color 0.3s ease-in-out,
+          background 0.3s ease-in-out;
 
         &:nth-child(2) {
           border-color: #e5eefd;
+
+          &:hover {
+            background-color: #1560bd;
+            color: #ffffff;
+          }
         }
 
         &:nth-child(3) {
           color: #fff;
           background: linear-gradient(136deg, #4c9cff -59.81%, #1560bd 164.51%);
           border-color: linear-gradient(136deg, #4c9cff -59.81%, #1560bd 164.51%);
+
+          &:hover {
+            background: linear-gradient(136deg, #1560bd -59.81%, #1560bd 164.51%);
+            color: #ffffff;
+          }
         }
       }
     }
