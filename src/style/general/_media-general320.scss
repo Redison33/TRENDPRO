@@ -30,6 +30,7 @@
   }
 
   .burger-menu {
+    width: 100%;
     &__container {
       width: 100%;
       gap: 38px;
@@ -128,20 +129,25 @@
 
   .popup {
     align-items: end;
+    width: 100%;
+    top: unset;
+    left: 0;
+    bottom: 0;
 
     &__container {
       width: 100%;
       border-radius: 24px 24px 0 0;
-      padding: 32px;
-      gap: 48px;
+      padding: 16px;
+      gap: 32px;
       flex-direction: column;
       align-items: center;
 
-      img {
-        width: 272px;
+      video {
+        width: 100%;
       }
 
       .popup__content {
+        padding: 16px;
         gap: 16px;
         padding: 0;
         padding-right: 0;
@@ -154,12 +160,32 @@
           // text-align: center;
           margin-bottom: 16px;
         }
+
+        a {
+          width: 100%;
+
+          span {
+            text-align: center;
+            width: 100%;
+          }
+        }
       }
 
       .popup__close {
-        position: fixed;
+        // position: fixed;
+        width: 58px;
+        height: 58px;
         top: 24px;
         right: 24px;
+        border-radius: 50%;
+        border: 1px solid #1560bd;
+
+        svg {
+          path {
+            fill: #1560bd;
+            fill-opacity: 1;
+          }
+        }
       }
     }
   }
@@ -204,6 +230,16 @@
             .footer__links {
               margin-top: unset;
               justify-content: end;
+
+              a {
+                width: 68px;
+                height: 68px;
+
+                svg {
+                  width: 68px;
+                  height: 68px;
+                }
+              }
             }
           }
 
@@ -211,7 +247,8 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
-            width: 320px;
+            max-width: 450px;
+            width: 100%;
             // display: none;
 
             .accordion {
@@ -224,7 +261,7 @@
                 color: #fdfdfd;
                 font-size: 16px;
                 font-style: normal;
-                font-weight: $weight-semibold;
+                font-weight: $weight-medium;
                 line-height: 125%;
                 letter-spacing: -0.16px;
                 padding: 6px 6px 6px 20px;

@@ -16,15 +16,15 @@
 
       h1 {
         order: 2;
-        max-width: unset;
+        max-width: 340px;
         text-align: center;
         margin-bottom: 7px;
       }
 
       .subtitle {
+        max-width: 340px;
         order: 4;
         font-size: 14px;
-        max-width: unset;
         text-align: center;
         margin-bottom: 24px;
       }
@@ -82,6 +82,10 @@
     &__container {
       .tools__header {
         margin-bottom: 20px;
+
+        .subtitle {
+          max-width: 310px;
+        }
       }
 
       .tools__content {
@@ -150,7 +154,7 @@
                 gap: 8px;
               }
 
-              img {
+              .card__img {
                 position: absolute;
                 left: 50% !important;
                 transform: translateX(-50%) scale(0.85) !important;
@@ -159,7 +163,7 @@
 
             &:nth-child(1) {
               .card {
-                img {
+                .card__img {
                   top: 76px !important;
                 }
               }
@@ -167,7 +171,7 @@
 
             &:nth-child(2) {
               .card {
-                img {
+                .card__img {
                   top: 117px !important;
                 }
               }
@@ -175,7 +179,7 @@
 
             &:nth-child(3) {
               .card {
-                img {
+                .card__img {
                   top: 65px !important;
                 }
               }
@@ -231,7 +235,7 @@
         ol {
           li {
             .card {
-              img {
+              .card__img {
                 opacity: 1;
                 transform: translateY(-50%) scale(1);
               }
@@ -343,6 +347,7 @@
               align-items: center;
 
               p {
+                max-width: 250px;
                 text-align: center;
               }
             }
@@ -418,11 +423,11 @@
         margin-bottom: 48px;
 
         h2 {
-          max-width: unset;
+          max-width: 320px;
         }
 
         p {
-          max-width: unset;
+          max-width: 320px;
         }
       }
 
@@ -431,12 +436,22 @@
           display: grid;
           grid-template-columns: repeat(3, 300px);
           gap: 8px;
+
+          li {
+            .card {
+              &:hover {
+                transform: none;
+                box-shadow: none;
+              }
+            }
+          }
         }
       }
 
       .practical__info {
         ul {
           flex-direction: column;
+          align-items: center;
           li {
             gap: 16px;
             p {
@@ -456,24 +471,37 @@
 
         &__content {
           order: 1;
-          max-width: unset;
+          max-width: 320px;
           gap: 24px;
           margin-bottom: 48px;
+
+          h3 {
+            text-align: center;
+          }
+
+          p {
+            text-align: center;
+          }
         }
 
         &__actions {
           order: 3;
-          max-width: unset;
+          max-width: 320px;
           align-items: center;
 
           p {
             width: 260px;
             justify-content: center;
             flex-direction: row-reverse;
+
+            img {
+              width: 20px;
+            }
           }
         }
 
         img {
+          width: 350px;
           order: 2;
           grid-area: unset;
         }
@@ -489,6 +517,10 @@
 
       .FAQ__header {
         margin-bottom: 48px;
+
+        .subtitle {
+          max-width: 290px;
+        }
       }
 
       .FAQ__tabs {
@@ -532,6 +564,14 @@
 
       .video__header {
         margin-bottom: 48px;
+
+        h2 {
+          max-width: 320px;
+        }
+
+        .subtitle {
+          max-width: 320px;
+        }
       }
 
       .video__content {
@@ -552,8 +592,8 @@
           }
 
           .video-info {
-            bottom: 10px;
-            left: 20px;
+            bottom: 24px;
+            left: 24px;
             .name {
               margin-bottom: 8px;
             }
@@ -588,6 +628,7 @@
         text-align: center;
         order: 3;
         margin-bottom: 32px;
+        max-width: 330px;
       }
 
       .primary-button {

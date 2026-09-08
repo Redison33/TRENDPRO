@@ -25,7 +25,7 @@
         }
 
         .number {
-          font-size: 12px;
+          // font-size: 12px;
           &__value {
             font-size: 24px;
           }
@@ -140,7 +140,7 @@
                 }
               }
 
-              img {
+              .card__img {
                 top: 50% !important;
                 transform: translateY(-50%) !important;
               }
@@ -148,7 +148,7 @@
 
             &:nth-child(1) {
               .card {
-                img {
+                .card__img {
                   left: 99px;
                 }
               }
@@ -156,7 +156,7 @@
 
             &:nth-child(2) {
               .card {
-                img {
+                .card__img {
                   left: 95px;
                 }
               }
@@ -164,7 +164,7 @@
 
             &:nth-child(3) {
               .card {
-                img {
+                .card__img {
                   left: 90px;
                 }
               }
@@ -218,7 +218,7 @@
         ol {
           li {
             .card {
-              img {
+              .card__img {
                 opacity: 1;
                 transform: translateY(-50%) scale(1);
               }

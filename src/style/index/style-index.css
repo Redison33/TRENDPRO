@@ -406,7 +406,7 @@
 .plan__container .plan__content ol li .card__content h5 {
   color: #1e2e47;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
 }
 .plan__container .plan__content ol li .card__content p {
@@ -415,20 +415,20 @@
   line-height: 125%;
   max-width: 350px;
 }
-.plan__container .plan__content ol li .card img {
+.plan__container .plan__content ol li .card .card__img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) scale(0.85);
   opacity: 0;
   transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
-.plan__container .plan__content ol li:nth-child(1) .card img {
+.plan__container .plan__content ol li:nth-child(1) .card .card__img {
   top: 87px;
 }
-.plan__container .plan__content ol li:nth-child(2) .card img {
+.plan__container .plan__content ol li:nth-child(2) .card .card__img {
   top: 128px;
 }
-.plan__container .plan__content ol li:nth-child(3) .card img {
+.plan__container .plan__content ol li:nth-child(3) .card .card__img {
   top: 76px;
 }
 .plan__container .plan__content .banner {
@@ -509,6 +509,10 @@
 .plan__container .plan__content .banner__actions .primary-button .icon svg {
   transition: transform 250ms ease;
 }
+.plan__container .plan__content .banner__actions .primary-button span {
+  width: 100%;
+  text-align: center;
+}
 .plan.is-visible .plan__content ol li .card {
   opacity: 1;
   transform: translateY(0);
@@ -517,7 +521,7 @@
   opacity: 1;
   transform: scale(1);
 }
-.plan.is-visible .plan__content ol li .card img {
+.plan.is-visible .plan__content ol li .card .card__img {
   opacity: 1;
   transform: translateX(-50%) scale(1);
 }
@@ -527,7 +531,7 @@
 .plan.is-visible .plan__content ol li:nth-child(1) .card__number {
   transition-delay: 0s;
 }
-.plan.is-visible .plan__content ol li:nth-child(1) .card img {
+.plan.is-visible .plan__content ol li:nth-child(1) .card .card__img {
   transition-delay: 0.55s;
 }
 .plan.is-visible .plan__content ol li:nth-child(2) .card {
@@ -536,7 +540,7 @@
 .plan.is-visible .plan__content ol li:nth-child(2) .card__number {
   transition-delay: 0.12s;
 }
-.plan.is-visible .plan__content ol li:nth-child(2) .card img {
+.plan.is-visible .plan__content ol li:nth-child(2) .card .card__img {
   transition-delay: 0.67s;
 }
 .plan.is-visible .plan__content ol li:nth-child(3) .card {
@@ -545,7 +549,7 @@
 .plan.is-visible .plan__content ol li:nth-child(3) .card__number {
   transition-delay: 0.24s;
 }
-.plan.is-visible .plan__content ol li:nth-child(3) .card img {
+.plan.is-visible .plan__content ol li:nth-child(3) .card .card__img {
   transition-delay: 0.79s;
 }
 .plan.is-visible .plan__content .banner {
@@ -1932,6 +1936,7 @@
 .video__container .video__content .video__wrap .video-info .description {
   color: rgba(255, 255, 255, 0.7490196078);
   font-size: 14px;
+  font-weight: 500;
   line-height: 120%;
   letter-spacing: 0%;
   margin-bottom: 24px;
@@ -2594,9 +2599,6 @@
     font-size: 9px;
     margin-bottom: 8px;
   }
-  .hero__container .hero__info .number {
-    font-size: 12px;
-  }
   .hero__container .hero__info .number__value {
     font-size: 24px;
   }
@@ -2675,17 +2677,17 @@
   .plan__container .plan__content ol li .card__content p br {
     display: none;
   }
-  .plan__container .plan__content ol li .card img {
+  .plan__container .plan__content ol li .card .card__img {
     top: 50% !important;
     transform: translateY(-50%) !important;
   }
-  .plan__container .plan__content ol li:nth-child(1) .card img {
+  .plan__container .plan__content ol li:nth-child(1) .card .card__img {
     left: 99px;
   }
-  .plan__container .plan__content ol li:nth-child(2) .card img {
+  .plan__container .plan__content ol li:nth-child(2) .card .card__img {
     left: 95px;
   }
-  .plan__container .plan__content ol li:nth-child(3) .card img {
+  .plan__container .plan__content ol li:nth-child(3) .card .card__img {
     left: 90px;
   }
   .plan__container .plan__content .banner {
@@ -2719,7 +2721,7 @@
   .plan__container .plan__content .banner__actions p {
     font-size: 14px;
   }
-  .plan.is-visible .plan__content ol li .card img {
+  .plan.is-visible .plan__content ol li .card .card__img {
     opacity: 1;
     transform: translateY(-50%) scale(1);
   }
@@ -2960,14 +2962,14 @@
   }
   .hero__container h1 {
     order: 2;
-    max-width: unset;
+    max-width: 340px;
     text-align: center;
     margin-bottom: 7px;
   }
   .hero__container .subtitle {
+    max-width: 340px;
     order: 4;
     font-size: 14px;
-    max-width: unset;
     text-align: center;
     margin-bottom: 24px;
   }
@@ -3014,6 +3016,9 @@
   }
   .tools__container .tools__header {
     margin-bottom: 20px;
+  }
+  .tools__container .tools__header .subtitle {
+    max-width: 310px;
   }
   .tools__container .tools__content {
     display: flex;
@@ -3070,18 +3075,18 @@
     flex-direction: column;
     gap: 8px;
   }
-  .plan__container .plan__content ol li .card img {
+  .plan__container .plan__content ol li .card .card__img {
     position: absolute;
     left: 50% !important;
     transform: translateX(-50%) scale(0.85) !important;
   }
-  .plan__container .plan__content ol li:nth-child(1) .card img {
+  .plan__container .plan__content ol li:nth-child(1) .card .card__img {
     top: 76px !important;
   }
-  .plan__container .plan__content ol li:nth-child(2) .card img {
+  .plan__container .plan__content ol li:nth-child(2) .card .card__img {
     top: 117px !important;
   }
-  .plan__container .plan__content ol li:nth-child(3) .card img {
+  .plan__container .plan__content ol li:nth-child(3) .card .card__img {
     top: 65px !important;
   }
   .plan__container .plan__content .banner {
@@ -3117,7 +3122,7 @@
   .plan__container .plan__content .banner__actions .primary-button {
     order: 4;
   }
-  .plan.is-visible .plan__content ol li .card img {
+  .plan.is-visible .plan__content ol li .card .card__img {
     opacity: 1;
     transform: translateY(-50%) scale(1);
   }
@@ -3178,6 +3183,7 @@
     align-items: center;
   }
   .team__container .team__content .team__card-right .card__wrap p {
+    max-width: 250px;
     text-align: center;
   }
   .social {
@@ -3231,18 +3237,23 @@
     margin-bottom: 48px;
   }
   .practical__container .practical__header h2 {
-    max-width: unset;
+    max-width: 320px;
   }
   .practical__container .practical__header p {
-    max-width: unset;
+    max-width: 320px;
   }
   .practical__container .practical__cards ul {
     display: grid;
     grid-template-columns: repeat(3, 300px);
     gap: 8px;
   }
+  .practical__container .practical__cards ul li .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
   .practical__container .practical__info ul {
     flex-direction: column;
+    align-items: center;
   }
   .practical__container .practical__info ul li {
     gap: 16px;
@@ -3260,13 +3271,19 @@
   }
   .practical__container .banner__content {
     order: 1;
-    max-width: unset;
+    max-width: 320px;
     gap: 24px;
     margin-bottom: 48px;
   }
+  .practical__container .banner__content h3 {
+    text-align: center;
+  }
+  .practical__container .banner__content p {
+    text-align: center;
+  }
   .practical__container .banner__actions {
     order: 3;
-    max-width: unset;
+    max-width: 320px;
     align-items: center;
   }
   .practical__container .banner__actions p {
@@ -3274,7 +3291,11 @@
     justify-content: center;
     flex-direction: row-reverse;
   }
+  .practical__container .banner__actions p img {
+    width: 20px;
+  }
   .practical__container .banner img {
+    width: 350px;
     order: 2;
     grid-area: unset;
   }
@@ -3286,6 +3307,9 @@
   }
   .FAQ__container .FAQ__header {
     margin-bottom: 48px;
+  }
+  .FAQ__container .FAQ__header .subtitle {
+    max-width: 290px;
   }
   .FAQ__container .FAQ__tabs {
     display: grid;
@@ -3310,6 +3334,12 @@
   .video__container .video__header {
     margin-bottom: 48px;
   }
+  .video__container .video__header h2 {
+    max-width: 320px;
+  }
+  .video__container .video__header .subtitle {
+    max-width: 320px;
+  }
   .video__container .video__content .video__wrap {
     height: 575px;
   }
@@ -3317,8 +3347,8 @@
     background: linear-gradient(206deg, rgba(0, 0, 0, 0) 46.48%, rgba(0, 0, 0, 0.73) 81.73%);
   }
   .video__container .video__content .video__wrap .video-info {
-    bottom: 10px;
-    left: 20px;
+    bottom: 24px;
+    left: 24px;
   }
   .video__container .video__content .video__wrap .video-info .name {
     margin-bottom: 8px;
@@ -3343,6 +3373,7 @@
     text-align: center;
     order: 3;
     margin-bottom: 32px;
+    max-width: 330px;
   }
   .final__container .primary-button {
     order: 4;

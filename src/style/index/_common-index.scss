@@ -454,7 +454,7 @@
               h5 {
                 color: #1e2e47;
                 font-style: normal;
-                font-weight: $weight-medium;
+                font-weight: $weight-semibold;
                 line-height: normal;
               }
 
@@ -466,7 +466,7 @@
               }
             }
 
-            img {
+            .card__img {
               position: absolute;
               left: 50%;
               transform: translateX(-50%) scale(0.85);
@@ -481,7 +481,7 @@
 
           &:nth-child(1) {
             .card {
-              img {
+              .card__img {
                 top: 87px;
               }
             }
@@ -489,7 +489,7 @@
 
           &:nth-child(2) {
             .card {
-              img {
+              .card__img {
                 top: 128px;
               }
             }
@@ -497,7 +497,7 @@
 
           &:nth-child(3) {
             .card {
-              img {
+              .card__img {
                 top: 76px;
               }
             }
@@ -609,6 +609,11 @@
             .icon svg {
               transition: transform 250ms ease;
             }
+
+            span {
+              width: 100%;
+              text-align: center;
+            }
           }
         }
       }
@@ -628,7 +633,7 @@
               transform: scale(1);
             }
 
-            img {
+            .card__img {
               opacity: 1;
               transform: translateX(-50%) scale(1);
             }
@@ -642,7 +647,7 @@
                 transition-delay: 0s;
               }
 
-              img {
+              .card__img {
                 transition-delay: 0.55s;
               }
             }
@@ -656,7 +661,7 @@
                 transition-delay: 0.12s;
               }
 
-              img {
+              .card__img {
                 transition-delay: 0.67s;
               }
             }
@@ -670,7 +675,7 @@
                 transition-delay: 0.24s;
               }
 
-              img {
+              .card__img {
                 transition-delay: 0.79s;
               }
             }
@@ -2473,6 +2478,7 @@
           .description {
             color: #ffffffbf;
             font-size: $fz-body-sm;
+            font-weight: $weight-medium;
             line-height: 120%;
             letter-spacing: 0%;
             margin-bottom: 24px;
