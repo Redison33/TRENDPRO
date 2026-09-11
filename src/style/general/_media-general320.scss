@@ -2,7 +2,7 @@
   body {
     background-size:
       100% 1400px,
-      100% 2000px;
+      100% 2900px;
   }
 
   .subtitle {
@@ -251,6 +251,10 @@
             width: 100%;
             // display: none;
 
+            h4 {
+              display: block;
+            }
+
             .accordion {
               width: 100%;
               button {
@@ -275,6 +279,7 @@
               }
 
               &__content {
+                padding: 0 20px;
                 height: 0;
                 overflow: hidden;
                 transition: height 0.3s ease-in-out;
@@ -283,9 +288,19 @@
               .list {
                 &__item {
                   a {
+                    border: none;
+                    color: #fff;
                   }
                 }
               }
+            }
+
+            .accordion-mobile {
+              display: block;
+            }
+
+            .accordion-desktop {
+              display: none;
             }
           }
         }

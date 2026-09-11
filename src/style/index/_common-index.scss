@@ -209,6 +209,7 @@
           }
 
           button {
+            position: relative;
             min-width: 32px;
             height: 32px;
             margin-left: auto;
@@ -324,11 +325,12 @@
               }
             }
 
-            &:not(:last-child) a::after {
+            &:not(:last-child) button::after,
+            a::after {
               content: '';
               position: absolute;
-              left: 18px;
-              right: 18px;
+              left: 20px;
+              right: 20px;
               bottom: 0;
               height: 1px;
               background-color: #e5eefd;

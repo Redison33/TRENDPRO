@@ -231,18 +231,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function resetMoreAccordions(tabBlock) {
       const items = tabBlock.querySelectorAll('ol > li');
-      const button = tabBlock.querySelector('.button-more');
+      // const button = tabBlock.querySelector('.button-more');
 
       items.forEach((item, index) => {
         item.style.display = index < MAX_VISIBLE ? 'block' : 'none';
       });
 
-      if (items.length > MAX_VISIBLE) {
-        button.style.display = 'flex';
-      }
+      // if (items.length > MAX_VISIBLE) {
+      //   button.style.display = 'flex';
+      // }
 
-      button.classList.remove('button-more--active');
-      button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
+      // button.classList.remove('button-more--active');
+      // button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
 
       tabBlock.querySelectorAll('.accordion').forEach((accordion) => {
         accordion.classList.remove('accordion--active');
@@ -255,36 +255,36 @@ document.addEventListener('DOMContentLoaded', () => {
       const items = tabBlock.querySelectorAll('ol > li');
       const button = tabBlock.querySelector('.button-more');
 
-      button.addEventListener('click', () => {
-        if (button.classList.contains('button-more--active')) {
-          items.forEach((item, index) => {
-            if (index > 5) {
-              item.style.display = 'none';
-              resetMoreAccordions(tabBlock);
-            }
-          });
+      // button.addEventListener('click', () => {
+      //   if (button.classList.contains('button-more--active')) {
+      //     items.forEach((item, index) => {
+      //       if (index > 5) {
+      //         item.style.display = 'none';
+      //         resetMoreAccordions(tabBlock);
+      //       }
+      //     });
 
-          contents.style.transition = 'height 0.3s ease-in-out';
+      //     contents.style.transition = 'height 0.3s ease-in-out';
 
-          contents.style.height = minHeight + 'px';
-          baseHeight = minHeight;
+      //     contents.style.height = minHeight + 'px';
+      //     baseHeight = minHeight;
 
-          button.classList.remove('button-more--active');
-          button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
-        } else {
-          button.classList.add('button-more--active');
-          button.querySelector('span').textContent = 'Скрыть';
+      //     button.classList.remove('button-more--active');
+      //     button.querySelector('span').textContent = 'Развернуть еще 5+ вопросов и ответов';
+      //   } else {
+      //     button.classList.add('button-more--active');
+      //     button.querySelector('span').textContent = 'Скрыть';
 
-          items.forEach((item) => {
-            item.style.display = 'block';
-          });
+      //     items.forEach((item) => {
+      //       item.style.display = 'block';
+      //     });
 
-          contents.style.transition = 'none';
+      //     contents.style.transition = 'none';
 
-          contents.style.height = `${tabBlock.scrollHeight}px`;
-          baseHeight = tabBlock.scrollHeight;
-        }
-      });
+      //     contents.style.height = `${tabBlock.scrollHeight}px`;
+      //     baseHeight = tabBlock.scrollHeight;
+      //   }
+      // });
     });
 
     for (const [index, tab] of tabs.querySelectorAll('.tab').entries()) {
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
           block.classList.remove('tab-block--active');
         }
 
-        contents.style.height = `${baseHeight}px`;
+        contents.style.height = `${minHeight}px`;
 
         tab.classList.add('tab--active');
 

@@ -214,6 +214,7 @@
   font-weight: 600;
 }
 .tools__container .tools__content .card__header button {
+  position: relative;
   min-width: 32px;
   height: 32px;
   margin-left: auto;
@@ -300,11 +301,12 @@
 .tools__container .tools__content .card ul li .active img {
   background-color: #ffffff;
 }
-.tools__container .tools__content .card ul li:not(:last-child) a::after {
+.tools__container .tools__content .card ul li:not(:last-child) button::after,
+.tools__container .tools__content .card ul li a::after {
   content: "";
   position: absolute;
-  left: 18px;
-  right: 18px;
+  left: 20px;
+  right: 20px;
   bottom: 0;
   height: 1px;
   background-color: #e5eefd;
@@ -2173,6 +2175,9 @@
     padding: 6px 12px;
     font-size: 13px;
   }
+  .practical__container .practical__cards ul li .card__content .card__result h3 {
+    font-size: 32px;
+  }
   .practical__container .banner__content {
     max-width: 400px;
     display: flex;
@@ -2291,7 +2296,7 @@
     padding: 0;
   }
   .tools__container .tools__content .card ul {
-    border: 1px solid #e5eefd;
+    border: none;
     border-radius: 8px;
   }
   .tools__container .tools__content .card ul li a,
@@ -2499,6 +2504,9 @@
     padding: 6px 8px;
     font-size: 12px;
   }
+  .practical__container .practical__cards ul li .card__content .card__result h3 {
+    font-size: 32px;
+  }
   .practical__container .practical__info ul li {
     gap: 20px;
   }
@@ -2634,8 +2642,7 @@
     margin-bottom: 24px;
   }
   .tools__container .tools__content .card ul {
-    border: 1px solid #e5eefd;
-    border-radius: 8px;
+    border: none;
   }
   .tools__container .tools__content .card ul li a,
   .tools__container .tools__content .card ul li button {
@@ -2899,6 +2906,9 @@
     padding: 6px 8px;
     font-size: 12px;
   }
+  .practical__container .practical__cards ul li .card__content .card__result h3 {
+    font-size: 32px;
+  }
   .practical__container .practical__info ul li {
     gap: 16px;
   }
@@ -3057,11 +3067,10 @@
     justify-content: center;
   }
   .plan__container .plan__content ol li .card {
-    max-width: 330px;
     background-image: url("../../assets/img/plan_card_bg.png");
     background-position: top center;
     background-size: cover;
-    padding: 30px;
+    padding: 24px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -3136,7 +3145,7 @@
     margin-bottom: 8px;
   }
   .questions__container .questions__content {
-    height: 1250px;
+    height: 1375px;
   }
   .questions__container .questions__content .tab-block {
     display: flex;
@@ -3146,12 +3155,15 @@
   .questions__container .questions__content .tab-block__wrap-left .tab-block__content {
     padding: 30px 24px;
   }
+  .questions__container .questions__content .tab-block__wrap-left ul {
+    max-height: unset;
+  }
   .questions__container .questions__content .tab-block__wrap-bottom {
     gap: 8px;
     grid-template-columns: repeat(1, 1fr);
   }
   .questions__container .questions__content .tab-block__wrap-bottom .card {
-    padding: 30px;
+    padding: 30px 24px;
   }
   .questions__container .questions__content .tab-block__wrap-bottom .card__header {
     align-items: center;
@@ -3171,7 +3183,10 @@
   .team__container .team__content {
     display: flex;
     flex-direction: column-reverse;
-    gap: 8px;
+    gap: 12px;
+  }
+  .team__container .team__content .team__card {
+    height: 560px;
   }
   .team__container .team__content .team__card-left .profile__wrap-left .profile__info {
     width: 100%;
@@ -3250,6 +3265,13 @@
   .practical__container .practical__cards ul li .card:hover {
     transform: none;
     box-shadow: none;
+  }
+  .practical__container .practical__cards ul li .card__content .worker__profile .worker__info p {
+    width: unset;
+    font-size: 12px;
+  }
+  .practical__container .practical__cards ul li .card__content .card__result h3 {
+    font-size: 32px;
   }
   .practical__container .practical__info ul {
     flex-direction: column;
