@@ -781,7 +781,7 @@
     }
 
     .questions__content {
-      height: 791px;
+      // height: 791px;
       position: relative;
 
       .tab-block {
@@ -801,7 +801,7 @@
 
         &__wrap {
           border-radius: 12px;
-          overflow: hidden;
+          // overflow: hidden;
 
           &-left {
             border: 1px solid #e5eefd;
@@ -880,6 +880,7 @@
               width: 100%;
               height: 100%;
               object-fit: cover;
+              border-radius: 12px;
             }
           }
 
@@ -1404,11 +1405,16 @@
                           border 0.3s ease-in-out;
                       }
                       &::after {
+                        content: '';
                         opacity: 0;
-                        content: url('../../assets/img/team_check.svg');
+                        width: 20px;
+                        height: 20px;
+                        background-image: url('../../assets/img/team_check.png');
+                        background-size: contain;
+                        filter: drop-shadow(-2px -2px 4px rgba(0, 0, 0, 0.25));
                         position: absolute;
-                        bottom: -3px;
-                        right: -3px;
+                        bottom: 6px;
+                        right: 7px;
                         transition: opacity 0.3s ease-in-out;
                       }
                     }

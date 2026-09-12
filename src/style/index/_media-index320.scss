@@ -80,7 +80,9 @@
   .tools {
     padding: 55px 0;
     &__container {
+      margin: 0 !important;
       .tools__header {
+        padding: 0 15px;
         margin-bottom: 20px;
 
         .subtitle {
@@ -89,10 +91,12 @@
       }
 
       .tools__content {
+        padding: 0 15px;
         display: flex;
         gap: 8px;
         overflow-x: auto;
         overflow-y: hidden;
+        padding-bottom: 5px;
 
         .card {
           min-width: 300px;
@@ -106,6 +110,17 @@
 
           p {
             padding: 0 16px;
+          }
+
+          &:hover {
+            border-color: #e5eefd;
+            box-shadow: unset;
+
+            .card__header {
+              img {
+                filter: unset;
+              }
+            }
           }
         }
       }
@@ -156,7 +171,7 @@
               .card__img {
                 position: absolute;
                 left: 50% !important;
-                transform: translateX(-50%) scale(0.85) !important;
+                transform: translateX(-50%) scale(1) !important;
               }
             }
 
@@ -258,7 +273,7 @@
       }
 
       .questions__content {
-        height: 1375px;
+        // height: 1375px;
         .tab-block {
           display: flex;
           flex-direction: column;

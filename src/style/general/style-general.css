@@ -518,6 +518,7 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 6px;
 }
 .burger-menu__container .burger-menu__header img {
   width: 155px;
@@ -1400,7 +1401,6 @@ h5 {
   .burger-menu__container .burger-menu__content ul {
     height: calc(100% - 80px);
     overflow-y: auto;
-    padding-right: 5px;
   }
   .burger-menu__container .burger-menu__content ul li .accordion__content nav {
     padding: 16px 32px;
@@ -1465,10 +1465,9 @@ h5 {
   .popup__container .popup__content {
     padding: 16px;
     gap: 16px;
-    padding: 0;
-    padding-right: 0;
   }
   .popup__container .popup__content p {
+    font-size: 14px;
     margin-bottom: 16px;
   }
   .popup__container .popup__content a {
@@ -1567,6 +1566,9 @@ h5 {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
+  }
+  .footer__container .footer__wrap-top .nav .accordion .list {
+    padding: 16px 0 8px 0;
   }
   .footer__container .footer__wrap-top .nav .accordion .list__item a {
     border: none;

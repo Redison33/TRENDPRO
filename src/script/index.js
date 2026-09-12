@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabs = questions.querySelector('.questions__tabs');
     const contents = questions.querySelector('.questions__content');
 
+    contents.style.height = contents.querySelector('.tab-block').scrollHeight + 'px';
+
     for (const [index, tab] of tabs.querySelectorAll('.tab').entries()) {
       tab.addEventListener('click', () => {
         for (const ostTab of tabs.querySelectorAll('.tab')) {
@@ -148,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tab.classList.add('tab--active');
         contents.querySelectorAll('.tab-block')[index].classList.add('tab-block--active');
+        contents.style.height = contents.querySelectorAll('.tab-block')[index].scrollHeight + 'px';
 
         contents
           .querySelectorAll('.tab-block')
