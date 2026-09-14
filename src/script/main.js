@@ -76,6 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
           button.classList.add('accordion__button--active');
           content.style.height = `${content.scrollHeight}px`;
         }
+
+        content.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            document.body.removeAttribute('style');
+            document.querySelector('.burger-menu').removeAttribute('style');
+            document.querySelector('.burger-overlay').removeAttribute('style');
+          });
+        });
       });
     });
   }
