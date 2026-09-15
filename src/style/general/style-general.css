@@ -351,6 +351,9 @@ h5 {
 .tab svg linearGradient {
   display: none;
 }
+.tab .svg-active {
+  display: none;
+}
 @media (max-width: 720px) {
   .tab {
     gap: 5px;
@@ -372,6 +375,12 @@ h5 {
   color: #1560bd;
 }
 .tab--active svg linearGradient {
+  display: block;
+}
+.tab--active .svg-base {
+  display: none;
+}
+.tab--active .svg-active {
   display: block;
 }
 

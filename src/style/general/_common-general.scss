@@ -109,6 +109,14 @@ h5 {
         display: block;
       }
     }
+
+    .svg-base {
+      display: none;
+    }
+
+    .svg-active {
+      display: block;
+    }
   }
 }
 

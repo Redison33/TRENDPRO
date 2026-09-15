@@ -176,6 +176,10 @@
     }
   }
 
+  .svg-active {
+    display: none;
+  }
+
   @media (max-width: 720px) {
     gap: 5px;
     font-size: 12px;
